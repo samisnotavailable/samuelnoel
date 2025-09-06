@@ -1,0 +1,98 @@
+
+@import 'animate.css';
+
+@font-face {
+    font-family: "Work Sans";
+    src: url('./assets/fonts/WorkSans-VariableFont_wght.ttf') format('ttf');
+    font-style: normal;
+    font-weight: 100 800;
+}
+@font-face {
+    font-family: NIS-JTC-Win-M5;
+    src: url('./assets/fonts/NIS-JTC-Win-M5.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: NIS-JTC-Win-M5-Condensed;
+    src: url('./assets/fonts/NIS-JTC-Win-M5-Condensed.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "DatDot";
+    src: url('./assets/fonts/DatDot-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+$primary-color: #0530ad;
+
+input, textarea, select, body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: NIS-JTC-Win-M5-Condensed, sans-serif;
+  font-weight: normal;
+  margin: 0;
+}
+
+h1 {
+    font-size: 14rem;
+}
+h2 {
+    font-size: 6rem;
+}
+h3 {
+    font-size: 4rem;
+}
+
+body {
+  margin: 0;
+  color: #28282B;
+  background-color: #F9F9F9;
+  overflow: hidden;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
