@@ -32,14 +32,19 @@ input, textarea, select, body {
   font-family: 'Work Sans', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
+  font-family: NIS-JTC-Win-M5-Condensed, sans-serif;
+  font-weight: normal;
+  margin: 0;
+}
+a, button {
   font-family: NIS-JTC-Win-M5-Condensed, sans-serif;
   font-weight: normal;
   margin: 0;
 }
 
 h1 {
-    font-size: 14rem;
+    font-size: 12rem;
 }
 h2 {
     font-size: 6rem;
@@ -47,13 +52,13 @@ h2 {
 h3 {
     font-size: 4rem;
 }
+p {
+  font-size: 1.5rem;
+}
 
 body {
-  margin: 0;
   color: #28282B;
   background-color: #F9F9F9;
-  overflow: hidden;
-  display: block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

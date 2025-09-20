@@ -15,24 +15,69 @@ i {
     top: 20px;
     left: 20px;
     z-index: 1000;
-    width: 40px;
-    height: 40px;
-    background: none;
-    border: none;
+    width: 45px;
+    height: 45px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 5px;
     cursor: pointer;
 
     .bar {
-        width: 30px;
-        height: 4px;
-        background-color: #333;
-        margin: 4px 0;
-        border-radius: 2px;
+        width: 12px;
+        height: 2px;
+        background-color: #fff;
+        border-radius: 1px;
         transition: 0.3s;
     }
+}
+
+.link-btn {
+    padding: .5rem;
+    background-color: black;
+    border-radius: 50px;
+    border: 3px solid black;
+    box-shadow: inset 0px -2px 1px rgba(0,0,0,0.8),
+        inset 0 2px 1px rgba(255,255,255,1);
+    transform: translateX(0); 
+    transition: transform 0.3s ease;
+}
+.link-btn:focus {
+    outline: none;
+}
+.link-btn::after {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 5px solid #F9FE8D;
+    border-radius: 5px;
+    content: "";
+    box-shadow: 0 0 15px 7.5px rgb(255, 166, 0);
+    animation: orb 1.5s infinite linear;
+    opacity: 0;
+}
+.link-btn:hover {
+  cursor: pointer;
+  background: linear-gradient(#000000 25%, #680908 100%);
+  border-color: red;
+  transform: translateX(20px);
+}
+.link-btn:hover:after {
+  opacity: 1;
+}
+.link_btn-text {
+  color: white;
+  font-size: 1rem;
+}
+/* Rotate animation */
+@keyframes orb {
+  from{
+     transform: rotate(0deg) translateX(20px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(20px) rotate(-360deg);
+  }
 }
 
 .nav-bar.show {
@@ -63,35 +108,6 @@ i {
         }
     }
 }
-
-/*
-.nav-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 9998;
-    min-height: 500px;
-    padding: 1rem;
-
-    .logo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 8px 0;
-
-        img {
-            display: block;
-            margin: 8px auto;
-            width: 24px;
-            height: auto;
-        }
-    }
-}
-*/
 
 nav {
     display: flex;
@@ -141,7 +157,7 @@ nav {
 .close-nav {
     position: absolute;
     top: 20px;
-    right: 20px;
+    left: 20px;
     background: none;
     border: none;
     font-size: 2rem;

@@ -1,45 +1,112 @@
-@property --x {
-  syntax: '<length-percentage>';
-  initial-value: 50vw;
-  inherits: false
-}
-
-@property --y {
-  syntax: '<length-percentage>';
-  initial-value: 50vh;
-  inherits: false
-}
-
-.container {
-    padding: 1rem;
-}
-
 .home-page {
-  --pattern: radial-gradient(closest-side, #777, #fff) 0/ 1em 1em space;
-  --map: 
-  radial-gradient(circle 200px at var(--x) var(--y), cornflowerblue, #fff);
-  height: 100%;
-  background: var(--pattern), var(--map);
-  background-blend-mode: darken;
-  filter: contrast(6); 
-  transition: .35s cubic-bezier(.1,0,.5,1.5);
-  transition-property: --x, --y;
+  min-height: 100vh;
 }
 
 .home-hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100%;
-    padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
-.title-hover {
-    filter:blur(20px);
-    transition: filter 0.3s ease-out;
+.home_hero-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
 }
 
-.title-hover:hover {
-    filter:blur(0);
+.home_hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.home-text {
+  width: 40%;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.home-text span {
+  font-style: italic;
+}
+
+.home-featured {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 5rem;
+  margin-top: 3rem;
+}
+.home_featured-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.featured-proj {
+  width: 8rem;
+  height: 8rem;
+  position: relative;
+  transition: all 0.3s ease-out;
+}
+.featured-proj:hover {
+  cursor: pointer;
+}
+.feat_proj-cover {
+  display: flex !important;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 70px;
+}
+.spiral {
+  filter: blur(30px);
+}
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+
+.blur {
+  filter: blur(3px); 
+}
+
+.feat_proj-title {
+  z-index: 11;
+  position: absolute;
+  inset: 40% 0% auto;
+}
+.feat_proj-title.white {
+  color: white;
+}
+
+.proj_cover-spiral {
+  border-radius: 70px;
+  width: inherit;
+  filter: blur(30px);
+}
+.proj_cover-img {
+  position: absolute;
+  width: inherit;
+  z-index: 10;
+  filter: contrast(0.1);
+}
+.proj_cover-bg {
+  width: 100%;
+  height: 100%;
+  background-color:azure;
+  position: relative;
+  z-index: 9;
 }

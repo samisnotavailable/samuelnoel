@@ -1,5 +1,76 @@
+@property --x {
+  syntax: '<length-percentage>';
+  initial-value: 50%;
+  inherits: false
+}
+
+@property --y {
+  syntax: '<length-percentage>';
+  initial-value: 50%;
+  inherits: false
+}
+
 .page {
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    will-change: contents;
+    --pattern: radial-gradient(closest-side, #777, #fff) 0/ .5em .5em space;
+    --map: 
+    radial-gradient(circle 200px at var(--x, 50%) var(--y, 50%), cornflowerblue, #fff);
+    background: var(--pattern), var(--map);
+    background-blend-mode: darken;
+    filter: contrast(10); 
+    transition: .35s cubic-bezier(.1,0,.5,1.5);
+    transition-property: --x, --y;
+    background-attachment: fixed;
+}
+
+.padding-global {
+    padding: 1rem;
+}
+
+.title-hover {
+    filter:blur(20px);
+    transition: filter 0.3s ease-out;
+}
+
+.title-hover:hover {
+    filter:blur(0);
+}
+
+.text-hover {
+    width: 40%;
+    text-align: center;
+    filter:blur(6px);
+    transition: filter 0.3s ease-out;
+}
+
+.text-hover:hover {
+    filter:blur(0);
+}
+
+.cta-btn {
+    padding: .5rem 1.5rem;
+    background: #000000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 10%, rgba(132, 164, 196, 1) 100%);
+    border-radius: 50px;
+    border: 2px solid black;
+    box-shadow: inset 0px -2px 1px rgba(0,0,0,0.8),
+        inset 0 2px 1px rgba(255,255,255,1);
+}
+.cta-btn:hover {
+  cursor: pointer;
+  border-color: red;
+}
+
+.link_btn-text {
+  color: white;
+  font-size: 1rem;
+}
+/* Rotate animation */
+@keyframes orb {
+  from{
+     transform: rotate(0deg) translateX(20px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(20px) rotate(-360deg);
+  }
 }

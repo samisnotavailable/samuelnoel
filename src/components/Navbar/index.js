@@ -23,13 +23,13 @@ const Navbar = () => {
 
     return (
         <>
-            <button className="hamburger" onClick={() => setShowNav(!showNav)} aria-label="Toggle navigation">
+            <button className="hamburger link-btn" onClick={() => setShowNav(!showNav)} aria-label="Toggle navigation">
                 <span className="bar"></span>
                 <span className="bar"></span>
                 <span className="bar"></span>
             </button>
             <div ref={navRef} className={`nav-bar${showNav ? ' show' : ''}`}>
-                <button className="close-nav" onClick={() => setShowNav(false)} aria-label="Close navigation">
+                <button className="close-nav link-btn" onClick={() => setShowNav(false)} aria-label="Close navigation">
                     &times;
                 </button>
                 <Link className="logo" to="/" onClick={() => setShowNav(false)}>
