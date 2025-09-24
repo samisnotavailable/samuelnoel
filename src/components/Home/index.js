@@ -12,7 +12,7 @@ const Home = () => {
                         <h1 className='title-hover'>world.</h1>
                     </div>
                     <div className='home_hero-text'>
-                        <p className='home-text'>My name is Samuel Noel (he/him), I am a creative developer and designer based in the Philippines. Please, feel free to look around or click on the button below to enter a random page.</p>
+                        <p className='home-text'>My name is Samuel Noel (he/him), I am a creative developer based in the Philippines. Please, feel free to look around or click on the button below to enter a random page.</p>
                         <Link to='/contact' className='cta-btn'>
                             <span className='link_btn-text'>Into the Rabbit Hole</span>
                         </Link>
