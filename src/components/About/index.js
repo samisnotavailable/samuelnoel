@@ -1,6 +1,12 @@
 import { useEffect } from 'react'
 import './index.scss'
 import { animate, createTimeline, stagger, text, utils } from "https://esm.sh/animejs@4.1.1";
+import { Link } from 'react-router-dom'
+import IDfront from '../../assets/images/ID-front.png'
+import IDback from '../../assets/images/ID-back.png'
+import IDempty from '../../assets/images/ID-front-empty.png'
+import IDpic from '../../assets/images/ID-pic.png'
+
 
 const About = () => {
     useEffect(() => {
@@ -19,7 +25,7 @@ const About = () => {
         const splitAndAnimate = () => {
             $split.disabled = true;
 
-            split = text.split('p', {
+            split = text.split('.about_text-p', {
                 lines: true,
             });
 
@@ -91,14 +97,89 @@ const About = () => {
         <div className='about-page'>
             <div className='padding-global'>
                 <div className='about-hero'>
-                    <p className='about-text'>
-                        Wave propagation and fluid dynamics encompass several interconnected physical phenomena that govern how water moves through oceanic systems, demonstrating the fundamental principles of energy transfer and momentum conservation. Wave "continuation" describes how energy persists through water long after the initial disturbance has passed, with individual water particles following elliptical orbital paths that decrease in amplitude with depth, creating the illusion of forward motion while actually moving in circular patterns. "Differential flow" occurs because various layers of water move at different velocities—surface currents respond to wind stress differently than deeper thermohaline circulation, and coastal waters behave distinctly from open ocean systems. A related phenomenon is "hydrodynamic lag," where water masses respond gradually to driving forces, whether from atmospheric pressure, gravitational pull, or temperature gradients. This lag affects everything from floating objects like debris and marine organisms to distinct water bodies themselves, such as upwelling zones and convergence areas. In oceanic circulation, deep water acts as the primary driver, with surface waves, spray, and foam representing secondary responses to local conditions. Water masses with different densities, such as warm surface layers and cold deep currents, or areas with varying salinity, exhibit more independent behavior than uniform water columns. Extreme manifestations of these forces create phenomena like rogue waves and storm surges, while calmer conditions require precise balance between competing forces to maintain stable patterns. Even apparently static water bodies demonstrate constant motion through molecular vibration, thermal convection, and microscopic currents that prevent true stagnation and maintain the ocean's dynamic equilibrium.
-                    </p>
-                    <fieldset>
-                        <button id="split" className='none'>SPLIT UP</button>
-                        <button id="reorder">REORGANIZE</button>
-                        <button id="debug">DEBUG MODE</button>
-                    </fieldset>
+                    <h3 className='about_hero-text'>ABOUT ME</h3>
+                </div>
+                <div className='about_ID-front'>
+                    <img src={IDempty} className='about-image' alt="ID front" />
+                    <div className='about-text'>
+                        <div className='ID_columns'>
+                            <div className='ID_column-01'>
+                                <div className='column_01-img'>
+                                    <img src={IDpic} className='about-ID' alt="ID pic" />
+                                </div>
+                                <div className='column_01-ID'>
+                                    <div className='ID-info'>
+                                        <p className='ID-label'>Contact Details</p>
+                                        <div className='ID-textbox'>
+                                            <a href='mailto:samuelnoel.work@gmail.com' className='ID-text'>samuelnoel.work@gmail.com</a>
+                                        </div>
+                                        <div className='ID-textbox'>
+                                            <a href='https://www.linkedin.com/in/samuel-noel-a2b3721a4/' className='ID-text'>Samuel Noel on LinkedIn</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='ID_column-02'>
+                                <div className='column_02-details'>
+                                    <div className='ID-info'>
+                                        <p className='ID-label'>Full Name</p>
+                                        <div className='ID-textbox'>
+                                            <h6 className='ID-text' style={{fontSize: '1.5rem'}}>SAMUEL NOEL</h6>
+                                        </div>
+                                    </div>
+                                    <div className='ID-info' style={{marginTop: '.25rem'}}>
+                                        <p className='ID-label'>Description</p>
+                                        <div className='ID-textbox'>
+                                            <h6 className='ID-text' style={{fontSize: '1.125rem'}}>creative developer & designer</h6>
+                                        </div>
+                                    </div>
+                                    <div className='ID_info-row' style={{marginTop: '.25rem'}}>
+                                        <div className='ID-info'>
+                                            <p className='ID-label'>Software & Tools Experience</p>
+                                            <div className='ID-textbox'>
+                                                <p className='ID-label'>Programming Languages</p>
+                                                <h6 className='ID-text'>JavaScript, PHP, Python, Java, SQL, Kotlin, Liquid</h6>
+                                                <p className='ID-label' style={{marginTop: '.25rem'}}>Frameworks & Libraries</p>
+                                                <h6 className='ID-text'>Bootstrap, Laravel, Django, React.js, Next.js, Three.js</h6>
+                                                <p className='ID-label' style={{marginTop: '.25rem'}}>Web Builders</p>
+                                                <h6 className='ID-text'>Webflow, WordPress, Oxygen, Shopify, Squarespace</h6>
+                                                <p className='ID-label' style={{marginTop: '.25rem'}}>Design Softwares</p>
+                                                <h6 className='ID-text'>Figma, Canva, Photoshop, Illustrator, Indesign</h6>
+                                            </div>
+                                        </div>
+                                        <div className='ID-info half'>
+                                            <p className='ID-label'>Skills</p>
+                                            <div className='ID-textbox' style={{height: '100%'}}>
+                                                <h6 className='ID-text'>Mobile & web development, HTML/CSS/SCSS, Git, version control, UX/UI design, branding, layout design, project management, task delegation</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className='about_ID-back'>
+                    <img src={IDback} className='about-image' alt="ID back" />
+                    <div className='about-text'>
+                        <p className='about_text-p'>
+                            My name is Samuel Noel (he/him), and this website is meant as both portfolio and playground for my creative and development work. I specialize in creating for the digital space, whether in the form of frontend development or visual identities and branding. My practice revolves around a full-scope approach, making design kits and website manuals along with the executed projects, to ensure the clients' understanding and ease of use.
+                        
+                            I took my college years in the De La Salle College of Saint Benilde, under their Information Systems program. From 2022 to 2024, I worked as a Senior Graphic Designer for the Benildean Press Corps. With PINO Studios, I have been their Web Developer and Multimedia Specialist since 2024, working on website projects for e-commerce and professional clients. As of 2025, I am also serving as a Frontend Engineer for Developh, a research & arts institution for critical & creative technologies in the Philippines.
+                            
+                            I believe that in an era of overconsumption and doomscrolling, when everything looks the same, design has the chance to become authentic again—or at the very least, fun.
+                        </p>
+                        <fieldset>
+                            <button id="split" className='none'>SPLIT UP</button>
+                            <button id="reorder">REORGANIZE</button>
+                            <button id="debug">DEBUG MODE</button>
+                        </fieldset>
+                    </div>
+                </div>
+                <div className='about-resume'>
+                    <Link to='/contact' className='cta-btn'>
+                        <span className='link_btn-text'>View My Resume</span>
+                    </Link>
                 </div>
             </div>
         </div>
