@@ -49,7 +49,7 @@
   align-content: center;
   justify-content: center;
   width: 100%;
-  gap: 10rem;
+  gap: 4rem;
   
 }
 .home_featured-intro {
@@ -68,6 +68,7 @@
   flex-direction: column;
   gap: 1rem;
 }
+
 .proj_image-banner {
   display: flex;
   align-items: center;
@@ -79,10 +80,16 @@
   border-radius: 25px;
 }
 .proj-image {
-  width: 50rem;
   position: absolute;
   filter: contrast(0.1);
 }
+.proj-image.web {
+  width: 50rem;
+}
+.proj-image.art {
+  width: 40rem;
+}
+
 .proj-text {
   display: flex;
   align-items: center;
@@ -98,22 +105,44 @@
   filter: contrast(0.1);
   transition: all 0.3s ease-out;
 }
-.proj-text div {
-  background-color: #7C7C7C;
-  transition: all 0.3s ease-out;
-}
 .proj_text-dot {
+  display: inline-block;
   width: .75rem;
   height: .75rem;
   border-radius: 100px;
+}
+.red, .blue, .yellow, .green, .pink, .brown, .orange, .violet {
+  background-color: #7C7C7C;
 }
 .proj-text:hover {
   cursor: pointer;
   color: black;
 }
-.proj_text div:hover {
+.proj-text:hover .red {
   background-color: red;
 }
+.proj-text:hover .blue {
+  background-color: #00a1ff;
+}
+.proj-text:hover .yellow {
+  background-color: #f7e714;
+}
+.proj-text:hover .green {
+  background-color: green;
+}
+.proj-text:hover .pink {
+  background-color: #FF98F1;
+}
+.proj-text:hover .brown {
+  background-color: brown;
+}
+.proj-text:hover .orange {
+  background-color: orange;
+}
+.proj-text:hover .violet {
+  background-color: #be28be;
+}
+
 
 /*
 .featured-proj {
