@@ -15,7 +15,7 @@ const Home = () => {
                     <div className='home_hero-text'>
                         <p className='home-text'>My name is Samuel Noel (he/him), I am a creative developer based in the Philippines. Please, feel free to look around or click on the button below to enter a random page.</p>
                         <Link to='/contact' className='cta-btn'>
-                            <span className='link_btn-text'>Into the Rabbit Hole</span>
+                            <span className='link_btn-text'>Down the Rabbit Hole</span>
                         </Link>
                     </div>
                     <div className='home-featured' id='home-featured'>

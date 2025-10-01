@@ -9,6 +9,10 @@
   text-rendering: optimizeSpeed;
 }
 
+.about-hero {
+  margin-top: 2rem;
+}
+
 .about_hero-text {
   margin-bottom: 2rem;
 }
@@ -93,7 +97,7 @@ a.ID-text {
 }
 
 .about-image {
-  filter: contrast(0.1);
+  filter: contrast(0.1) blur(5px);
 }
 
 .about_text-p {

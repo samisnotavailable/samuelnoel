@@ -66,7 +66,7 @@
 .featured-proj {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .proj_image-banner {
@@ -78,6 +78,12 @@
   position: relative;
   background-color: black;
   border-radius: 25px;
+  filter: blur(15px);
+  transition: all 0.5s ease-out;
+}
+.proj_image-banner:hover {
+  cursor: pointer;
+  filter: blur(0px);
 }
 .proj-image {
   position: absolute;
