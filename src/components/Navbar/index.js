@@ -51,19 +51,12 @@ const Navbar = () => {
                         </div>
                         <h5>Design</h5>
                     </NavLink>
-                    <NavLink exact="true" activeclassname="active" className="navlink" to="/about" onClick={() => setShowNav(false)}>
+                    <NavLink exact="true" activeclassname="active" className="navlink" to="/connect" onClick={() => setShowNav(false)}>
                         <div className='nav-icon'>
                             <img src={TestIcon} className='icon-normal' alt="icon" />
                             <img src={LogoS} className='icon-hover' alt="icon" />
                         </div>
-                        <h5>About</h5>
-                    </NavLink>
-                    <NavLink exact="true" activeclassname="active" className="navlink" to="/contact" onClick={() => setShowNav(false)}>
-                        <div className='nav-icon'>
-                            <img src={TestIcon} className='icon-normal' alt="icon" />
-                            <img src={LogoS} className='icon-hover' alt="icon" />
-                        </div>
-                        <h5>Contact</h5>
+                        <h5>Connect</h5>
                     </NavLink>
                 </nav>
             </div>
