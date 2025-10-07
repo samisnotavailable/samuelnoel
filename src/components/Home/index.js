@@ -137,7 +137,7 @@ const Home = () => {
                                 </div>
                                 <div className='proj_text-right'>
                                     <div className='proj-text'>
-                                        <h6 className='proj_text-title'>AGOS Screening Event dot psd</h6>
+                                        <h6 className='proj_text-title'>AGOS Screening dot psd</h6>
                                         <span className='proj_text-dot blue'></span>
                                         <h6 className='proj_text-category'>visual identity</h6>
                                     </div>

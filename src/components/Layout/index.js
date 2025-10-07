@@ -1,9 +1,14 @@
+import { useLocation } from 'react-router-dom'
 import { useEffect, useRef } from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from '../Navbar'
 import './index.scss'
 
 const Layout = () => {
+    const location = useLocation()
+    const hideNavbarRoutes = 
+        location.pathname.startsWith('/website/') ||
+        location.pathname.startsWith('/design/')
     const mouseRef = useRef(null)
 
     useEffect(() => {
@@ -23,7 +28,7 @@ const Layout = () => {
 
     return (
         <div className='App'>
-            <Navbar />
+            {!hideNavbarRoutes && <Navbar />}
             <div ref={mouseRef} className='page'>
                 <Outlet />
             </div>

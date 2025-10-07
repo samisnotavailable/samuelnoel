@@ -35,7 +35,7 @@ function App() {
         <Route path="design/gawad-benildyano" element={<Gawad />} />
         <Route path="website/diende" element={<Diende />} />
         <Route path="website/natu" element={<Natu />} />
-        <Route path="design/agos-screening-event" element={<Agos />} />
+        <Route path="design/agos-charity-screening" element={<Agos />} />
         <Route path="website/modo-food-&-living" element={<Modo />} />
         <Route path="website/hit-productions" element={<HitProd />} />
         <Route path="design/the-benildean-24" element={<TB24 />} />
