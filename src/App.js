@@ -4,7 +4,7 @@ import Layout from './components/Layout'
 import Home from './components/Home'
 import Connect from './components/Connect';
 import Pino from './components/Website/pino';
-import Novice from './components/Website/novice';
+import Novice from './components/Design/novice';
 import CCCollage from './components/Website/cccollage';
 import RRHI from './components/Website/rrhi';
 import Gawad from './components/Design/gawad';
@@ -28,13 +28,13 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="connect" element={<Connect />} />
-        <Route path="website/pino" element={<Pino />} />
-        <Route path="website/novice" element={<Novice />} />
+        <Route path="website/pino-studio" element={<Pino />} />
+        <Route path="design/novice-magazine" element={<Novice />} />
         <Route path="website/cccollage" element={<CCCollage />} />
         <Route path="website/robinsons-retail-holdings" element={<RRHI />} />
         <Route path="design/gawad-benildyano" element={<Gawad />} />
         <Route path="website/diende" element={<Diende />} />
-        <Route path="website/natu" element={<Natu />} />
+        <Route path="website/natu-explorations" element={<Natu />} />
         <Route path="design/agos-charity-screening" element={<Agos />} />
         <Route path="website/modo-food-&-living" element={<Modo />} />
         <Route path="website/hit-productions" element={<HitProd />} />
@@ -44,7 +44,7 @@ function App() {
         <Route path="website/torre-lorenzo" element={<TorreLorenzo />} />
         <Route path="design/spaces-for-womens-arts-and-narratives" element={<SWAN />} />
         <Route path="design/shades-of-gray-irreversible" element={<ShadesOfGray />} />
-        <Route path="website/madman" element={<Madman />} />
+        <Route path="website/madman-creative-solutions" element={<Madman />} />
       </Route>
     </Routes>
     </>

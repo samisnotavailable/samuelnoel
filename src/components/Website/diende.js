@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './index.scss'
 import { Link } from 'react-router-dom'
+import Item01 from '../../assets/images/ID-back.png'
 
 const Diende = () => {
     const [loading, setLoading] = useState(true)
@@ -13,6 +14,18 @@ const Diende = () => {
         }, 3000)
         return () => clearTimeout(timer)
     }, [])
+    useEffect(() => {
+        if (typeof document === 'undefined') return
+        const previousOverflow = document.body.style.overflow
+        if (loading) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = previousOverflow
+        }
+        return () => {
+            document.body.style.overflow = previousOverflow
+        }
+    }, [loading])
 
     return (
         <div className='web-page'>
@@ -24,10 +37,12 @@ const Diende = () => {
             )}
             <div className={`padding-global${loading ? ' hidden' : ''}`}>
                 <div className='web_page-container'>
-                    <div className='back_btn-container'>
-                        <div className='back-btn'></div>
-                        <p className='back_btn-txt'>Return</p>
-                    </div>
+                    <Link to='/'>
+                        <div className='back_btn-container'>
+                            <div className='back-btn'></div>
+                            <p className='back_btn-txt'>Return</p>
+                        </div>
+                    </Link>
                     <div className='web-hero'>
                         <div className='web_hero-text'>
                             <h6 className='hero_text-left'>Diende dot neocities dot org</h6>
@@ -42,6 +57,107 @@ const Diende = () => {
                                 </div>
                             </div>
                         </Link>
+                    </div>
+                    <div className='web-description'>
+                        <div className='web_description-grid'>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 01' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 02' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 03' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 04' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 05' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 06' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 07' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 08' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 09' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 10' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 01' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 02' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 03' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 04' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 05' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 06' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 07' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 08' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 09' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 10' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 01' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 02' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 03' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 04' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 05' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 06' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 07' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 08' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 09' className='grid-image' />
+                            </div>
+                            <div className='grid_item'>
+                                <img src={Item01} alt='item 10' className='grid-image' />
+                            </div>
+                        </div>
+                        <div className='web_description-text'>
+                            <h3 className='description-title'>About the Project</h3>
+                            <p className='description-paragraph'>XYZ is a portfolio website for a web developer and designer. The website showcases their skills and projects in a visually appealing way. The website is built using HTML, CSS, and JavaScript. The website is responsive and works well on all devices. The website is also optimized for search engines.</p>
+                        </div>
+                    </div>
+                    <div className='web-gallery'>
+
                     </div>
                 </div>
             </div>
