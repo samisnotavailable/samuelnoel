@@ -1,7 +1,17 @@
-import { useState, useEffect } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import './index.scss'
 import { Link } from 'react-router-dom'
-import Item01 from '../../assets/images/ID-back.png'
+import DiendeTB from '../../assets/images/diende/diende.jpg'
+import Item01 from '../../assets/images/diende/diende-01.jpg'
+import Item02 from '../../assets/images/diende/diende-02.jpg'
+import Item03 from '../../assets/images/diende/diende-03.gif'
+import Item04 from '../../assets/images/diende/diende-04.jpg'
+import Item05 from '../../assets/images/diende/diende-05.jpg'
+import Item06 from '../../assets/images/diende/diende-06.jpg'
+import Item07 from '../../assets/images/diende/diende-07.jpg'
+import Item08 from '../../assets/images/diende/diende-08.gif'
+import Item09 from '../../assets/images/diende/diende-09.gif'
+
 
 const Diende = () => {
     const [loading, setLoading] = useState(true)
@@ -27,6 +37,55 @@ const Diende = () => {
         }
     }, [loading])
 
+    useEffect(() => {
+        const tags = document.querySelectorAll('.description-tag');
+        const parent = document.querySelector('.web_description-tags');
+        if (!parent) return;
+
+        tags.forEach(tag => {
+            tag.style.position = 'absolute';
+
+            let isDragging = false;
+            let offsetX = 0;
+            let offsetY = 0;
+
+            const onMouseDown = (e) => {
+                e.preventDefault();
+                isDragging = true;
+                const parentRect = parent.getBoundingClientRect();
+                const tagRect = tag.getBoundingClientRect();
+                // Mouse position relative to the tag
+                offsetX = e.clientX - tagRect.left;
+                offsetY = e.clientY - tagRect.top;
+                tag.style.zIndex = 1200;
+                document.addEventListener('mousemove', onMouseMove);
+                document.addEventListener('mouseup', onMouseUp);
+            };
+
+            const onMouseMove = (e) => {
+                if (!isDragging) return;
+                const parentRect = parent.getBoundingClientRect();
+                // Set position relative to parent
+                tag.style.left = `${e.clientX - parentRect.left - offsetX}px`;
+                tag.style.top = `${e.clientY - parentRect.top - offsetY}px`;
+            };
+
+            const onMouseUp = () => {
+                isDragging = false;
+                tag.style.zIndex = 1100;
+                document.removeEventListener('mousemove', onMouseMove);
+                document.removeEventListener('mouseup', onMouseUp);
+            };
+
+            tag.addEventListener('mousedown', onMouseDown);
+
+            // Cleanup
+            return () => {
+                tag.removeEventListener('mousedown', onMouseDown);
+            };
+        });
+    }, []);
+
     return (
         <div className='web-page'>
             {loading && (
@@ -35,14 +94,14 @@ const Diende = () => {
                     <h6 className='preloader-text'>—through the looking glass—</h6>
                 </div>
             )}
+            <Link to='/' target="_blank" >
+                <div className='back_btn-container'>
+                    <div className='back-btn red'></div>
+                    <p className='back_btn-txt'>Return</p>
+                </div>
+            </Link>
             <div className={`padding-global${loading ? ' hidden' : ''}`}>
                 <div className='web_page-container'>
-                    <Link to='/'>
-                        <div className='back_btn-container'>
-                            <div className='back-btn'></div>
-                            <p className='back_btn-txt'>Return</p>
-                        </div>
-                    </Link>
                     <div className='web-hero'>
                         <div className='web_hero-text'>
                             <h6 className='hero_text-left'>Diende dot neocities dot org</h6>
@@ -58,106 +117,39 @@ const Diende = () => {
                             </div>
                         </Link>
                     </div>
+                    <div className='web-gallery'>
+                        <img className='web_gallery-div gallery_outer-image' src={DiendeTB} alt='diende website screenshot'></img>
+                        <div className='web_gallery-div'>
+                            <img className='gallery-image' src={Item03} alt="diende website screenshot" />
+                            <img className='gallery-image' src={Item04} alt="diende website screenshot" />
+                            <img className='gallery-image' src={Item05} alt="diende website screenshot" />
+                            <img className='gallery-image' src={Item02} alt="diende website screenshot" />
+                        </div>
+                        <div className='web_gallery-div'>
+                            <img className='gallery-image' src={Item07} alt="diende website screenshot" />
+                            <img className='gallery-image' src={Item01} alt="diende website screenshot" />
+                            <img className='gallery-image' src={Item09} alt="diende website screenshot" />
+                            <img className='gallery-image' src={Item06} alt="diende website screenshot" />
+                        </div>
+                        <img className='web_gallery-div gallery_outer-image' src={Item08} alt='diende website screenshot'></img>
+                    </div>
                     <div className='web-description'>
-                        <div className='web_description-grid'>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 01' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 02' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 03' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 04' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 05' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 06' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 07' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 08' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 09' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 10' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 01' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 02' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 03' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 04' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 05' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 06' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 07' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 08' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 09' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 10' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 01' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 02' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 03' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 04' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 05' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 06' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 07' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 08' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 09' className='grid-image' />
-                            </div>
-                            <div className='grid_item'>
-                                <img src={Item01} alt='item 10' className='grid-image' />
-                            </div>
+                        <div className='web_description-tags'>
+                            <div id='tag-01' className='description-tag'><h3>frontend development</h3></div>
+                            <div id='tag-02' className='description-tag'><h3>neocities</h3></div>
+                            <div id='tag-03' className='description-tag'><h3>ux/ui design</h3></div>
+                            <div id='tag-04' className='description-tag'><h3>personal blog</h3></div>
+                            <div id='tag-05' className='description-tag'><h3>portfolio website</h3></div>
+                            <div id='tag-06' className='description-tag'><h3>art direction</h3></div>
+                            <div id='tag-07' className='description-tag'><h3>HTML/CSS/JS</h3></div>
+                            <div id='tag-08' className='description-tag'><h3>artist</h3></div>
+                            <div id='tag-09' className='description-tag'><h3>indiesite</h3></div>
+                            <div id='tag-10' className='description-tag'><h3>storytelling</h3></div>
                         </div>
                         <div className='web_description-text'>
                             <h3 className='description-title'>About the Project</h3>
-                            <p className='description-paragraph'>XYZ is a portfolio website for a web developer and designer. The website showcases their skills and projects in a visually appealing way. The website is built using HTML, CSS, and JavaScript. The website is responsive and works well on all devices. The website is also optimized for search engines.</p>
+                            <p className='description-paragraph'>This is both an artistic space and a personal blog, containing both writings and artworks I have done under the moniker Diende. Inspired by Evangelion, Adobe Flash websites, and other inventive online places, this indiesite is a love letter to what makes the internet special: a hub to carve out your own identity, and a refuge to find others like you, hence its domain being on Neocities. Each page and section is intended to be as simple yet as reinventive as they can get, while remaining an interactive playground for myself and visitors alike.</p>
                         </div>
-                    </div>
-                    <div className='web-gallery'>
-
                     </div>
                 </div>
             </div>
