@@ -96,7 +96,7 @@ const Diende = () => {
             )}
             <Link to='/' target="_blank" >
                 <div className='back_btn-container'>
-                    <div className='back-btn red'></div>
+                    <div className='back-btn red-btn'></div>
                     <p className='back_btn-txt'>Return</p>
                 </div>
             </Link>
