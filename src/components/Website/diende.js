@@ -18,6 +18,7 @@ const Diende = () => {
     const [fadeOut, setFadeOut] = useState(false)
 
     useEffect(() => {
+        window.scrollTo(0, 0); //scroll to top of page
         const timer = setTimeout(() => {
             setFadeOut(true)
             setTimeout(() => setLoading(false), 500)
@@ -94,9 +95,9 @@ const Diende = () => {
                     <h6 className='preloader-text'>—through the looking glass—</h6>
                 </div>
             )}
-            <Link to='/' target="_blank" >
+            <Link to='/'>
                 <div className='back_btn-container'>
-                    <div className='back-btn red-btn'></div>
+                    <div className='back-btn blue-btn'></div>
                     <p className='back_btn-txt'>Return</p>
                 </div>
             </Link>
