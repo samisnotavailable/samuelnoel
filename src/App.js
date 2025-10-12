@@ -20,6 +20,7 @@ import TorreLorenzo from './components/Website/torre';
 import SWAN from './components/Design/swan';
 import ShadesOfGray from './components/Design/sog';
 import Madman from './components/Website/madman';
+import Auro from './components/Website/auro';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
         <Route path="design/spaces-for-womens-arts-and-narratives" element={<SWAN />} />
         <Route path="design/shades-of-gray-irreversible" element={<ShadesOfGray />} />
         <Route path="website/madman-creative-solutions" element={<Madman />} />
+        <Route path="website/auro-chocolate" element={<Auro/>} />
       </Route>
     </Routes>
     </>

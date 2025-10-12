@@ -137,15 +137,15 @@ const Natu = () => {
                     <div className='web-description'>
                         <div className='web_description-tags'>
                             <div id='tag-01' className='description-tag'><h3>frontend development</h3></div>
-                            <div id='tag-02' className='description-tag'><h3>CMS management</h3></div>
-                            <div id='tag-03' className='description-tag'><h3>business enterprise</h3></div>
-                            <div id='tag-04' className='description-tag'><h3>wordpress</h3></div>
-                            <div id='tag-05' className='description-tag'><h3></h3></div>
-                            <div id='tag-06' className='description-tag'><h3>backend development</h3></div>
-                            <div id='tag-07' className='description-tag'><h3>oxygen builder</h3></div>
-                            <div id='tag-08' className='description-tag'><h3>PHP language</h3></div>
-                            <div id='tag-09' className='description-tag'><h3>retail website</h3></div>
-                            <div id='tag-10' className='description-tag'><h3></h3></div>
+                            <div id='tag-02' className='description-tag'><h3>webflow</h3></div>
+                            <div id='tag-03' className='description-tag'><h3>creative agency</h3></div>
+                            <div id='tag-04' className='description-tag'><h3>finsweet</h3></div>
+                            <div id='tag-05' className='description-tag'><h3>portfolio website</h3></div>
+                            <div id='tag-06' className='description-tag'><h3>website maintenance</h3></div>
+                            <div id='tag-07' className='description-tag'><h3>CMS management</h3></div>
+                            <div id='tag-08' className='description-tag'><h3>client-first</h3></div>
+                            <div id='tag-09' className='description-tag'><h3>animations</h3></div>
+                            <div id='tag-10' className='description-tag'><h3>mobile-responsive</h3></div>
                         </div>
                         <div className='web_description-text'>
                             <h3 className='description-title'>About the Project</h3>

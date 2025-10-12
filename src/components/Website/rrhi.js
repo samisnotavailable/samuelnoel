@@ -145,7 +145,7 @@ const RRHI = () => {
                             <div id='tag-07' className='description-tag'><h3>oxygen builder</h3></div>
                             <div id='tag-08' className='description-tag'><h3>PHP language</h3></div>
                             <div id='tag-09' className='description-tag'><h3>retail website</h3></div>
-                            <div id='tag-10' className='description-tag'><h3></h3></div>
+                            <div id='tag-10' className='description-tag'><h3>mobile-responsive</h3></div>
                         </div>
                         <div className='web_description-text'>
                             <h3 className='description-title'>About the Project</h3>

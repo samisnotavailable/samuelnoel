@@ -13,7 +13,7 @@ import Item08 from '../../assets/images/rrhi/rrhi-08.jpg'
 import Item09 from '../../assets/images/rrhi/rrhi-09.jpg'
 
 
-const HitProd = () => {
+const Auro = () => {
     const [loading, setLoading] = useState(true)
     const [fadeOut, setFadeOut] = useState(false)
 
@@ -91,7 +91,7 @@ const HitProd = () => {
         <div className='web-page'>
             {loading && (
                 <div className={`preloader${fadeOut ? ' fade-out' : ''}`}>
-                    <h1 className='preloader-text'>HIT Productions</h1>
+                    <h1 className='preloader-text'>AURO <br></br>Chocolate</h1>
                     <h6 className='preloader-text'>—through the looking glass—</h6>
                 </div>
             )}
@@ -105,15 +105,15 @@ const HitProd = () => {
                 <div className='web_page-container'>
                     <div className='web-hero'>
                         <div className='web_hero-text'>
-                            <h6 className='hero_text-left'>HIT Productions dot net</h6>
+                            <h6 className='hero_text-left'>AURO Chocolate dot com</h6>
                             <h6 className='hero_text-right'>Web development, CMS management, business website</h6>
                         </div>
-                        <Link to="https://www.hitproductions.net/" target="_blank" rel="noopener noreferrer">
+                        <Link to="https://aurochocolate.com/" target="_blank" rel="noopener noreferrer">
                             <div className='web_hero-container'>
                                 <h2 className='hero_video-link'>Visit the website</h2>
                                 <div className='hero_video-container'> 
                                     <div className='hero_video-visit'></div> 
-                                    <iframe className='hero-video' src="https://player.vimeo.com/video/1126593701?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerPolicy="strict-origin-when-cross-origin"></iframe>
+                                    <iframe className='hero-video' src="https://player.vimeo.com/video/1126614171?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1&amp;controls=0" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerPolicy="strict-origin-when-cross-origin"></iframe>
                                 </div>
                             </div>
                         </Link>
@@ -158,4 +158,4 @@ const HitProd = () => {
     )
 }
 
-export default HitProd
+export default Auro
