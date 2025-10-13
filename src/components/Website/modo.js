@@ -1,16 +1,16 @@
 import { useRef, useState, useEffect } from 'react'
 import './index.scss'
 import { Link } from 'react-router-dom'
-import DiendeTB from '../../assets/images/rrhi/rrhi.jpg'
-import Item01 from '../../assets/images/rrhi/rrhi-01.jpg'
-import Item02 from '../../assets/images/rrhi/rrhi-02.jpg'
-import Item03 from '../../assets/images/rrhi/rrhi-03.jpg'
-import Item04 from '../../assets/images/rrhi/rrhi-04.jpg'
-import Item05 from '../../assets/images/rrhi/rrhi-05.jpg'
-import Item06 from '../../assets/images/rrhi/rrhi-06.jpg'
-import Item07 from '../../assets/images/rrhi/rrhi-07.jpg'
-import Item08 from '../../assets/images/rrhi/rrhi-08.jpg'
-import Item09 from '../../assets/images/rrhi/rrhi-09.jpg'
+import ModoTB from '../../assets/images/modo/modo.jpg'
+import Item01 from '../../assets/images/modo/modo-01.jpg'
+import Item02 from '../../assets/images/modo/modo-02.jpg'
+import Item03 from '../../assets/images/modo/modo-03.jpg'
+import Item04 from '../../assets/images/modo/modo-04.jpg'
+import Item05 from '../../assets/images/modo/modo-05.jpg'
+import Item06 from '../../assets/images/modo/modo-06.jpg'
+import Item07 from '../../assets/images/modo/modo-07.jpg'
+import Item08 from '../../assets/images/modo/modo-08.jpg'
+import Item09 from '../../assets/images/modo/modo-09.jpg'
 
 
 const Modo = () => {
@@ -119,7 +119,7 @@ const Modo = () => {
                         </Link>
                     </div>
                     <div className='web-gallery'>
-                        <img className='web_gallery-div gallery_outer-image' src={DiendeTB} alt='diende website screenshot'></img>
+                        <img className='web_gallery-div gallery_outer-image' src={ModoTB} alt='diende website screenshot'></img>
                         <div className='web_gallery-div'>
                             <img className='gallery-image' src={Item04} alt="diende website screenshot" />
                             <img className='gallery-image' src={Item03} alt="diende website screenshot" />
@@ -128,11 +128,11 @@ const Modo = () => {
                         </div>
                         <div className='web_gallery-div'>
                             <img className='gallery-image' src={Item09} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item01} alt="diende website screenshot" />
+                            <img className='gallery-image' src={Item08} alt="diende website screenshot" />
                             <img className='gallery-image' src={Item07} alt="diende website screenshot" />
                             <img className='gallery-image' src={Item06} alt="diende website screenshot" />
                         </div>
-                        <img className='web_gallery-div gallery_outer-image' src={Item08} alt='diende website screenshot'></img>
+                        <img className='web_gallery-div gallery_outer-image' src={Item01} alt='diende website screenshot'></img>
                     </div>
                     <div className='web-description'>
                         <div className='web_description-tags'>
