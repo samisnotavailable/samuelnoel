@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
 import './index.scss'
 import { Link } from 'react-router-dom'
-import DiendeTB from '../../assets/images/cccollage/cccollage.jpg'
+import CCCollageTB from '../../assets/images/cccollage/cccollage.jpg'
 import Item01 from '../../assets/images/cccollage/cccollage-01.jpg'
 import Item02 from '../../assets/images/cccollage/cccollage-02.jpg'
 import Item03 from '../../assets/images/cccollage/cccollage-03.png'
@@ -106,7 +106,7 @@ const CCCollage = () => {
                     <div className='web-hero'>
                         <div className='web_hero-text'>
                             <h6 className='hero_text-left'>CCCOLLAGE dot com</h6>
-                            <h6 className='hero_text-right'>Web development, information hub, art direction</h6>
+                            <h6 className='hero_text-right'>Web development, Docusaurus, art direction</h6>
                         </div>
                         <Link to="https://www.cccollage.com/" target="_blank" rel="noopener noreferrer">
                             <div className='web_hero-container'>
@@ -119,20 +119,20 @@ const CCCollage = () => {
                         </Link>
                     </div>
                     <div className='web-gallery'>
-                        <img className='web_gallery-div gallery_outer-image' src={DiendeTB} alt='diende website screenshot'></img>
                         <div className='web_gallery-div'>
-                            <img className='gallery-image' src={Item04} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item03} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item05} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item02} alt="diende website screenshot" />
+                            <img className='gallery-image' src={Item04} alt="website screenshot" />
+                            <img className='gallery-image' src={Item03} alt="website screenshot" />
+                            <img className='gallery-image' src={Item05} alt="website screenshot" />
+                            <img className='gallery-image' src={Item02} alt="website screenshot" />
                         </div>
+                        <img className='web_gallery-div gallery_outer-image' src={CCCollageTB} alt='website screenshot'></img>
+                        <img className='web_gallery-div gallery_outer-image' src={Item08} alt='website screenshot'></img>
                         <div className='web_gallery-div'>
-                            <img className='gallery-image' src={Item09} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item01} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item07} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item06} alt="diende website screenshot" />
+                            <img className='gallery-image' src={Item09} alt="website screenshot" />
+                            <img className='gallery-image' src={Item01} alt="website screenshot" />
+                            <img className='gallery-image' src={Item07} alt="website screenshot" />
+                            <img className='gallery-image' src={Item06} alt="website screenshot" />
                         </div>
-                        <img className='web_gallery-div gallery_outer-image' src={Item08} alt='diende website screenshot'></img>
                     </div>
                     <div className='web-description'>
                         <div className='web_description-tags'>
@@ -149,7 +149,7 @@ const CCCollage = () => {
                         </div>
                         <div className='web_description-text'>
                             <h3 className='description-title'>About the Project</h3>
-                            <p className='description-paragraph'>This is both an artistic space and a personal blog, containing both writings and artworks I have done under the moniker Diende. Inspired by Evangelion, Adobe Flash websites, and other inventive online places, this indiesite is a love letter to what makes the internet special: a hub to carve out your own identity, and a refuge to find others like you, hence its domain being on Neocities. Each page and section is intended to be as simple yet as reinventive as they can get, while remaining an interactive playground for myself and visitors alike.</p>
+                            <p className='description-paragraph'>CCCollage, or Crash Course Collage, is a resource and informational website on the art of collage-making, as well as a developing directory for collage artists across the world. It was built using ReactJS and Docusaurus for a lighter, more dynamic build with accessibility in mind. The website is screen-responsive and can have its display settings changed from lightmode to darkmode. All animations and asset designs are done by me, intended to emulate the look and feel of making a collage from scratch. Since its launch in late 2024, CCCollage has been used as a reference in classroom settings and educational purposes. It is currently going through a redesign.</p>
                         </div>
                     </div>
                 </div>

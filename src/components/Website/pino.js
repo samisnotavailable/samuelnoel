@@ -118,20 +118,20 @@ const Pino = () => {
                         </Link>
                     </div>
                     <div className='web-gallery'>
-                        <img className='web_gallery-div gallery_outer-image' src={Item06} alt='diende website screenshot'></img>
+                        <img className='web_gallery-div gallery_outer-image' src={Item06} alt='website screenshot'></img>
                         <div className='web_gallery-div'>
-                            <img className='gallery-image' src={Item03} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item02} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item08} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item04} alt="diende website screenshot" />
+                            <img className='gallery-image' src={Item03} alt="website screenshot" />
+                            <img className='gallery-image' src={Item02} alt="website screenshot" />
+                            <img className='gallery-image' src={Item08} alt="website screenshot" />
+                            <img className='gallery-image' src={Item04} alt="website screenshot" />
                         </div>
                         <div className='web_gallery-div'>
-                            <img className='gallery-image' src={Item07} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item01} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item05} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item09} alt="diende website screenshot" />
+                            <img className='gallery-image' src={Item07} alt="website screenshot" />
+                            <img className='gallery-image' src={Item01} alt="website screenshot" />
+                            <img className='gallery-image' src={Item05} alt="website screenshot" />
+                            <img className='gallery-image' src={Item09} alt="website screenshot" />
                         </div>
-                        <img className='web_gallery-div gallery_outer-image' src={PinoTB} alt='diende website screenshot'></img>
+                        <img className='web_gallery-div gallery_outer-image' src={PinoTB} alt='website screenshot'></img>
                     </div>
                     <div className='web-description'>
                         <div className='web_description-tags'>

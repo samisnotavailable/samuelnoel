@@ -119,29 +119,29 @@ const Natu = () => {
                         </Link>
                     </div>
                     <div className='web-gallery'>
+                        <img className='web_gallery-div gallery_outer-image' src={NatuTB} alt='website screenshot'></img>
                         <div className='web_gallery-div'>
-                            <img className='gallery-image' src={Item04} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item05} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item02} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item07} alt="diende website screenshot" />
+                            <img className='gallery-image' src={Item04} alt="website screenshot" />
+                            <img className='gallery-image' src={Item05} alt="website screenshot" />
+                            <img className='gallery-image' src={Item02} alt="website screenshot" />
+                            <img className='gallery-image' src={Item07} alt="website screenshot" />
                         </div>
-                        <img className='web_gallery-div gallery_outer-image' src={NatuTB} alt='diende website screenshot'></img>
-                        <img className='web_gallery-div gallery_outer-image' src={Item08} alt='diende website screenshot'></img>
                         <div className='web_gallery-div'>
-                            <img className='gallery-image' src={Item09} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item01} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item03} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item06} alt="diende website screenshot" />
+                            <img className='gallery-image' src={Item09} alt="website screenshot" />
+                            <img className='gallery-image' src={Item01} alt="website screenshot" />
+                            <img className='gallery-image' src={Item03} alt="website screenshot" />
+                            <img className='gallery-image' src={Item06} alt="website screenshot" />
                         </div>
+                        <img className='web_gallery-div gallery_outer-image' src={Item08} alt='website screenshot'></img>
                     </div>
                     <div className='web-description'>
                         <div className='web_description-tags'>
                             <div id='tag-01' className='description-tag'><h3>frontend development</h3></div>
                             <div id='tag-02' className='description-tag'><h3>webflow</h3></div>
-                            <div id='tag-03' className='description-tag'><h3>creative agency</h3></div>
+                            <div id='tag-03' className='description-tag'><h3>travel experience</h3></div>
                             <div id='tag-04' className='description-tag'><h3>finsweet</h3></div>
-                            <div id='tag-05' className='description-tag'><h3>portfolio website</h3></div>
-                            <div id='tag-06' className='description-tag'><h3>website maintenance</h3></div>
+                            <div id='tag-05' className='description-tag'><h3>luxury destinations</h3></div>
+                            <div id='tag-06' className='description-tag'><h3>website manual</h3></div>
                             <div id='tag-07' className='description-tag'><h3>CMS management</h3></div>
                             <div id='tag-08' className='description-tag'><h3>client-first</h3></div>
                             <div id='tag-09' className='description-tag'><h3>animations</h3></div>
@@ -149,7 +149,7 @@ const Natu = () => {
                         </div>
                         <div className='web_description-text'>
                             <h3 className='description-title'>About the Project</h3>
-                            <p className='description-paragraph'>This is both an artistic space and a personal blog, containing both writings and artworks I have done under the moniker Diende. Inspired by Evangelion, Adobe Flash websites, and other inventive online places, this indiesite is a love letter to what makes the internet special: a hub to carve out your own identity, and a refuge to find others like you, hence its domain being on Neocities. Each page and section is intended to be as simple yet as reinventive as they can get, while remaining an interactive playground for myself and visitors alike.</p>
+                            <p className='description-paragraph'>NATU Explorations is a travel experience business, providing personalized journeys and exquisite luxury hotels for destinations across the globe. My tasks included building its pages and layouts; setting up CMS management; creating animations and dynamic interactions for its hotel modals; and lastly providing a website manual and workshop for website turnover to the client. This screen-responsive website was made on Webflow, using Finsweet's Client-First guidelines, with the assistance of TypeForm for booking and inquiry needs. NATU Explorations was developed and partially designed by me, with overall design by Enrico Sebastian Cruz.</p>
                         </div>
                     </div>
                 </div>

@@ -8,7 +8,8 @@ const Layout = () => {
     const location = useLocation()
     const hideNavbarRoutes = 
         location.pathname.startsWith('/website/') ||
-        location.pathname.startsWith('/design/')
+        location.pathname.startsWith('/design/') ||
+        location.pathname.startsWith('/connect')
     const mouseRef = useRef(null)
 
     useEffect(() => {

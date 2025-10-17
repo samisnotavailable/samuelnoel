@@ -1,0 +1,332 @@
+.preloader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    min-width: 500px;
+    min-height: 500px;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: linear-gradient(180deg, #000000 50%, #00a1ff 80%, #ffffff 100%);
+    z-index: 1100;
+    filter: contrast(0.1);
+    transition: opacity 1s ease-out;
+    opacity: 1;
+    pointer-events: auto;
+    animation: flash 0.5s ease-in-out;
+}
+.preloader.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.preloader-text {
+    color: white;
+}
+
+@keyframes flash {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+    //75% { opacity: 0.3; }
+}
+
+.padding-global.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s ease-out;
+    //transition: opacity 0.8s cubic-bezier(.4,0,.2,1);
+}
+
+.design-page:not(.preloader) .padding-global {
+    transition: opacity 0.8s ease-out;
+    //transition: opacity 0.8s cubic-bezier(.4,0,.2,1);
+    opacity: 1;
+}
+
+.back_btn-container {
+    width: fit-content;
+    position: sticky;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+.back_btn-container:hover {
+    cursor: pointer;
+}
+
+.back-btn {
+    border-radius: 100%;
+    overflow: hidden;
+    //filter: opacity(0.5) blur(15px);
+    padding: 0.25rem;
+    width: 3rem;
+    height: 3rem;
+    transition: all 0.3s ease-out;
+}
+.back-btn:hover {
+    filter: blur(35px);
+}
+
+.red-btn {
+    background-color: red;
+}
+.blue-btn {
+    background-color: #0022ff;
+}
+
+.back_btn-txt {
+    position: absolute;
+    top: 20px;
+    left: 12px;
+    filter: contrast(0.1);
+    color: transparent;
+    font-size: .675rem;
+    transition: color 0.5s ease-out;
+    pointer-events: none;
+}
+.back_btn-container:hover .back_btn-txt {
+    color: white;
+}
+
+.design_page-container {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.design-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    margin-top: -5rem;
+}
+
+.design_hero-container {
+    position: fixed;
+    height: 95vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+}
+
+.design_hero-overflow {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.design_hero-thumbnail {
+    height: 40vh;
+    filter: contrast(0.1);
+}
+
+
+.design_hero-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    text-align: center;
+    z-index: 10;
+}
+.design_hero-text h6 {
+    width: 22%;
+}
+.hero_text-left {
+    text-align: left;
+}
+.hero_text-right {
+    text-align: right;
+}
+
+.design-gallery {
+    display: flex;
+    //grid-template-columns: repeat(2, 1fr);
+    //grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    filter: contrast(0.1);
+}
+
+.design_gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.gallery_image-reg {
+    width: auto;
+    height: 25vh;
+    cursor: pointer;
+}
+
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: none;
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  padding: 4px;
+}
+
+
+.design-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    //margin: 0 4rem;
+    position: relative;
+}
+
+.design_description-tags {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 0;
+    filter: contrast(0.1);
+}
+
+.description-tag {
+    width: fit-content;
+    min-width: 2rem;
+    height: 2.5rem;
+    min-height: 2.5rem;
+    text-transform: uppercase;
+    position: absolute;
+    padding: .5rem 1.5rem;
+    background: linear-gradient(180deg, #000000 40%, #00a1ff 80%, #ffffff 100%);
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 50px;
+    box-shadow: inset 0px -2px 1px rgba(0,0,0,0.8),
+        inset 0 2px 1px rgba(255,255,255,1), 0px 0px 60px 0px black;
+    cursor: grab;
+    user-select: none;
+    color: white;
+}
+
+.description-tag,
+.description-tag * {
+    user-select: none;
+}
+
+.description-tag h3 {
+    user-select: none;
+    pointer-events: none;
+}
+
+.description-tag:hover {
+    cursor: pointer;
+    border-color: red;
+}
+.description-tag:active {
+    cursor: grabbing;
+    border-color: red;
+}
+
+#tag-01 {
+    top: -20rem;
+    left: 10rem;
+}
+#tag-02 {
+    top: -10rem;
+    left: 5rem;
+}
+#tag-03 {
+    top: 0rem;
+    left: 0rem;
+}
+#tag-04 {
+    bottom: -12rem;
+    left: 5rem;
+}
+#tag-05 {
+    bottom: -20rem;
+    left: 10rem;
+}
+#tag-06 {
+    top: -20rem;
+    right: 10rem;
+}
+#tag-07 {
+    top: -10rem;
+    right: 5rem;
+}
+#tag-08 {
+    top: 0rem;
+    right: 0rem;
+}
+#tag-09 {
+    bottom: -12rem;
+    right: 5rem;
+}
+#tag-10 {
+    bottom: -20rem;
+    right: 10rem;
+}
+
+.grid-image {
+    width: 10rem;
+}
+.grid-image:hover {
+    cursor: pointer;
+}
+
+.design_description-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 30rem;
+    border-radius: 25px;
+    border: 3px solid #E3E3E3;
+    background-color: #EEE;
+    box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 0px 120px 40px black;
+    padding: 2rem;
+    gap: 1rem;
+    filter: contrast(0.1);
+    position: absolute;
+}
+
+.description-paragraph {
+    font-size: 1.25rem;
+}

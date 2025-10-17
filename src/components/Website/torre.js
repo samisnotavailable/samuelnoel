@@ -1,16 +1,16 @@
 import { useRef, useState, useEffect } from 'react'
 import './index.scss'
 import { Link } from 'react-router-dom'
-import DiendeTB from '../../assets/images/rrhi/rrhi.jpg'
-import Item01 from '../../assets/images/rrhi/rrhi-01.jpg'
-import Item02 from '../../assets/images/rrhi/rrhi-02.jpg'
-import Item03 from '../../assets/images/rrhi/rrhi-03.jpg'
-import Item04 from '../../assets/images/rrhi/rrhi-04.jpg'
-import Item05 from '../../assets/images/rrhi/rrhi-05.jpg'
-import Item06 from '../../assets/images/rrhi/rrhi-06.jpg'
-import Item07 from '../../assets/images/rrhi/rrhi-07.jpg'
-import Item08 from '../../assets/images/rrhi/rrhi-08.jpg'
-import Item09 from '../../assets/images/rrhi/rrhi-09.jpg'
+import TorreTB from '../../assets/images/torre/torrelorenzo.png'
+import Item01 from '../../assets/images/torre/torre-01.gif'
+import Item02 from '../../assets/images/torre/torre-02.gif'
+import Item03 from '../../assets/images/torre/torre-03.gif'
+import Item04 from '../../assets/images/torre/torre-04.jpg'
+import Item05 from '../../assets/images/torre/torre-05.jpg'
+import Item06 from '../../assets/images/torre/torre-06.jpg'
+import Item07 from '../../assets/images/torre/torre-07.jpg'
+import Item08 from '../../assets/images/torre/torre-08.webp'
+import Item09 from '../../assets/images/torre/torre-09.jpg'
 
 
 const TorreLorenzo = () => {
@@ -106,7 +106,7 @@ const TorreLorenzo = () => {
                     <div className='web-hero'>
                         <div className='web_hero-text'>
                             <h6 className='hero_text-left'>TORRE LORENZO dot com</h6>
-                            <h6 className='hero_text-right'>Web development, CMS management, business website</h6>
+                            <h6 className='hero_text-right'>Web development, Webflow, business website</h6>
                         </div>
                         <Link to="https://www.torrelorenzo.com/" target="_blank" rel="noopener noreferrer">
                             <div className='web_hero-container'>
@@ -119,37 +119,37 @@ const TorreLorenzo = () => {
                         </Link>
                     </div>
                     <div className='web-gallery'>
-                        <img className='web_gallery-div gallery_outer-image' src={DiendeTB} alt='diende website screenshot'></img>
                         <div className='web_gallery-div'>
-                            <img className='gallery-image' src={Item04} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item03} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item05} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item02} alt="diende website screenshot" />
+                            <img className='gallery-image' src={Item03} alt="website screenshot" />
+                            <img className='gallery-image' src={Item04} alt="website screenshot" />
+                            <img className='gallery-image' src={Item05} alt="website screenshot" />
+                            <img className='gallery-image' src={Item02} alt="website screenshot" />
                         </div>
+                        <img className='web_gallery-div gallery_outer-image' src={TorreTB} alt='website screenshot'></img>
+                        <img className='web_gallery-div gallery_outer-image' src={Item07} alt='website screenshot'></img>
                         <div className='web_gallery-div'>
-                            <img className='gallery-image' src={Item09} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item01} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item07} alt="diende website screenshot" />
-                            <img className='gallery-image' src={Item06} alt="diende website screenshot" />
+                            <img className='gallery-image' src={Item09} alt="website screenshot" />
+                            <img className='gallery-image' src={Item01} alt="website screenshot" />
+                            <img className='gallery-image' src={Item08} alt="website screenshot" />
+                            <img className='gallery-image' src={Item06} alt="website screenshot" />
                         </div>
-                        <img className='web_gallery-div gallery_outer-image' src={Item08} alt='diende website screenshot'></img>
                     </div>
                     <div className='web-description'>
                         <div className='web_description-tags'>
                             <div id='tag-01' className='description-tag'><h3>frontend development</h3></div>
-                            <div id='tag-02' className='description-tag'><h3>CMS management</h3></div>
-                            <div id='tag-03' className='description-tag'><h3>business enterprise</h3></div>
-                            <div id='tag-04' className='description-tag'><h3>wordpress</h3></div>
-                            <div id='tag-05' className='description-tag'><h3></h3></div>
-                            <div id='tag-06' className='description-tag'><h3>backend development</h3></div>
-                            <div id='tag-07' className='description-tag'><h3>oxygen builder</h3></div>
-                            <div id='tag-08' className='description-tag'><h3>PHP language</h3></div>
-                            <div id='tag-09' className='description-tag'><h3>retail website</h3></div>
+                            <div id='tag-02' className='description-tag'><h3>webflow</h3></div>
+                            <div id='tag-03' className='description-tag'><h3>real estate</h3></div>
+                            <div id='tag-04' className='description-tag'><h3>finsweet</h3></div>
+                            <div id='tag-05' className='description-tag'><h3>zendesk</h3></div>
+                            <div id='tag-06' className='description-tag'><h3>website manual</h3></div>
+                            <div id='tag-07' className='description-tag'><h3>CMS management</h3></div>
+                            <div id='tag-08' className='description-tag'><h3>API integration</h3></div>
+                            <div id='tag-09' className='description-tag'><h3>zapier</h3></div>
                             <div id='tag-10' className='description-tag'><h3>mobile-responsive</h3></div>
                         </div>
                         <div className='web_description-text'>
                             <h3 className='description-title'>About the Project</h3>
-                            <p className='description-paragraph'>This is both an artistic space and a personal blog, containing both writings and artworks I have done under the moniker Diende. Inspired by Evangelion, Adobe Flash websites, and other inventive online places, this indiesite is a love letter to what makes the internet special: a hub to carve out your own identity, and a refuge to find others like you, hence its domain being on Neocities. Each page and section is intended to be as simple yet as reinventive as they can get, while remaining an interactive playground for myself and visitors alike.</p>
+                            <p className='description-paragraph'>Torre Lorenzo is a website created for the Torre Lorenzo Development Corporation, a premium real estate developer for university and family residences. My tasks included editing and managing pages as well as its CMS; setting up Zendesk, Zapier, and company API connection; and lastly providing a website manual and workshop for website turnover to the client. This screen-responsive website was made on Webflow, using Finsweet's Client-First guidelines. Torre Lorenzo was co-developed with Gabo Pundavela and designed by Lindt James Lacanlale.</p>
                         </div>
                     </div>
                 </div>

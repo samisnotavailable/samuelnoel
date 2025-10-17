@@ -19,7 +19,7 @@ const Connect = () => {
             })
             .then(
                 () => {
-                    alert('Message successfully sent!')
+                    alert('Frabjous! Message successfully sent. Please wait for a response within 7 working days.')
                     window.location.reload(false)
                 },
                 (error) => {
@@ -113,6 +113,12 @@ const Connect = () => {
 
     return (
         <div className='connect-page'>
+            <Link to='/'>
+                <div className='back_btn-container'>
+                    <div className='back-btn black-btn'></div>
+                    <p className='back_btn-txt'>Return</p>
+                </div>
+            </Link>
             <div className='padding-global'>
                 {/* Contact Section                 <div className='about-resume'>
                     <Link to='/contact' className='cta-btn'>
@@ -136,10 +142,10 @@ const Connect = () => {
                                         </li>
                                     </div>
                                     <li>
-                                        <input className='form-input' type="text" name="subject" placeholder="Subject of Inquiry" required />
+                                        <input className='form-input' type="text" name="company" placeholder="Company or Organization you represent" required />
                                     </li>
                                     <li>
-                                        <input className='form-input' type="text" name="company" placeholder="Company or Organization you represent" required />
+                                        <input className='form-input' type="text" name="subject" placeholder="Subject of Inquiry" required />
                                     </li>
                                     <li>
                                         <input className='form-input' type="text" name="budget" placeholder="Input your budget (indicate PHP or USD)" required />
@@ -225,7 +231,7 @@ const Connect = () => {
                                     
                                         I took my college years in the De La Salle College of Saint Benilde, under their Information Systems program. From 2022 to 2024, I worked as a Senior Graphic Designer for the Benildean Press Corps. With PINO Studios, I have been their Web Developer and Multimedia Specialist since 2024, working on website projects for e-commerce and professional clients. As of 2025, I am also serving as a Frontend Engineer for Developh, a research & arts institution for critical & creative technologies in the Philippines.
                                         
-                                        I believe that in an era of overconsumption and doomscrolling, when everything looks the same, design has the chance to become authentic again—or at the very least, fun.
+                                        I believe that in an era of overconsumption and doomscrolling, when everything looks the same, the internet can become authentic again—or at the very least, fun.
                                     </p>
                                     <fieldset>
                                         <button id="split" className='none'>SPLIT UP</button>

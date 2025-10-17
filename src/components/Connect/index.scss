@@ -1,12 +1,12 @@
 .connect-page {
     min-height: 100vh;
-    padding: 2rem;
 }
 
 .connect-hero {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -4rem;
 }
 
 .connect-info {
@@ -49,7 +49,7 @@ button #split {
     margin: 0;
     width: auto;
     top: 80px;
-    z-index: 10;
+    z-index: 1001;
 
     ul {
         display: flex;
@@ -107,7 +107,7 @@ button #split {
     }
     textarea {
       width: 100%;
-      height: 90px;
+      height: 150px;
       font-size: 1rem;
       padding: 1.5rem;
       box-sizing: border-box;
@@ -224,4 +224,32 @@ a.ID-text {
     background-color: blue;
     width: 30rem;
     height: 30rem;
+}
+
+
+.back_btn-container {
+    width: fit-content;
+    position: sticky;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+.back_btn-container:hover {
+    cursor: pointer;
+}
+
+.back-btn {
+    border-radius: 100%;
+    overflow: hidden;
+    padding: 0.25rem;
+    width: 3rem;
+    height: 3rem;
+    transition: all 0.3s ease-out;
+}
+.back-btn:hover {
+    filter: blur(35px);
+}
+
+.black-btn {
+    background-color: black;
 }
