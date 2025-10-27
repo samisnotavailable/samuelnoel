@@ -10,12 +10,12 @@ import Natu from '../../assets/images/natu/natu.jpg'
 import Agos from '../../assets/images/agos/agos.png'
 import Modo from '../../assets/images/modo/modo.jpg'
 import Hit from '../../assets/images/hit/hit.jpg'
-import TB24 from '../../assets/images/tb24.png'
-import TB25 from '../../assets/images/TB25.png'
-import PMV from '../../assets/images/pmv.png'
+import TB24 from '../../assets/images/tb24/tb24.jpg'
+import TB25 from '../../assets/images/tb25/TB25.png'
+import PMV from '../../assets/images/pmv/pmv.png'
 import TorreLorenzo from '../../assets/images/torre/torrelorenzo.png'
-import Swan from '../../assets/images/swan.png'
-import SOG from '../../assets/images/sog-irreversible.png'
+import Swan from '../../assets/images/swan/swan.png'
+import WCLWHTR from '../../assets/images/wclwhtr/wclwhtr.png'
 import Madman from '../../assets/images/madman/madman.png'
 import AURO from '../../assets/images/auro/auro.jpg'
 
@@ -260,22 +260,22 @@ const Home = () => {
                                         <div className='proj-text'>
                                             <h6 className='proj_text-title'>SWAN dot psd</h6>
                                             <span className='proj_text-dot red'></span>
-                                            <h6 className='proj_text-category'>visual identity & merch</h6>
+                                            <h6 className='proj_text-category'>merch & online campaign</h6>
                                         </div>
                                     </div>
                                 </div>
                             </Link>
-                            <Link to='/design/shades-of-gray-irreversible' className='proj-link'>
+                            <Link to='/design/we-cannot-leave-without-hoping-to-return' className='proj-link'>
                                 <div className='featured-proj'>
                                     <div className='proj_image-banner'>
                                         <div className='proj_image-bg'></div>
-                                        <img src={SOG} className='proj-image art' alt="cover" />
+                                        <img src={WCLWHTR} className='proj-image art' alt="cover" />
                                     </div>
                                         <div className='proj_text-right'>
                                             <div className='proj-text'>
-                                            <h6 className='proj_text-title'>SHADES OF GRAY: Irreversible</h6>
+                                            <h6 className='proj_text-title'>WCLWHTR dot psd</h6>
                                             <span className='proj_text-dot red'></span>
-                                            <h6 className='proj_text-category'>editorial</h6>
+                                            <h6 className='proj_text-category'>book cover</h6>
                                         </div>
                                     </div>
                                 </div>

@@ -18,9 +18,10 @@ import TB25 from './components/Design/tb25';
 import PMV from './components/Design/pmv';
 import TorreLorenzo from './components/Website/torre';
 import SWAN from './components/Design/swan';
-import ShadesOfGray from './components/Design/sog';
+import WCLWHTR from './components/Design/wclwhtr';
 import Madman from './components/Website/madman';
 import Auro from './components/Website/auro';
+import PageNotFound from './components/PageNotFound';
 
 function App() {
   return (
@@ -44,9 +45,10 @@ function App() {
         <Route path="design/people-may-vary" element={<PMV />} />
         <Route path="website/torre-lorenzo" element={<TorreLorenzo />} />
         <Route path="design/spaces-for-womens-arts-and-narratives" element={<SWAN />} />
-        <Route path="design/shades-of-gray-irreversible" element={<ShadesOfGray />} />
+        <Route path="design/we-cannot-leave-without-hoping-to-return" element={<WCLWHTR />} />
         <Route path="website/madman-creative-solutions" element={<Madman />} />
         <Route path="website/auro-chocolate" element={<Auro/>} />
+        <Route path="*" element={<PageNotFound />} /> {/* Catch-all route for 404 */}
       </Route>
     </Routes>
     </>
