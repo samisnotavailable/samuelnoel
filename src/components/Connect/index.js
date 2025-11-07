@@ -19,7 +19,7 @@ const Connect = () => {
             })
             .then(
                 () => {
-                    alert('Frabjous! Message successfully sent. Please wait for a response within 7 working days.')
+                    alert('Message successfully sent. Please wait for a response within 7 working days.')
                     window.location.reload(false)
                 },
                 (error) => {

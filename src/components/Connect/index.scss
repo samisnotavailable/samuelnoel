@@ -253,3 +253,91 @@ a.ID-text {
 .black-btn {
     background-color: black;
 }
+
+// Mobile styles 
+
+@media (max-width: 768px) {
+
+  .connect-hero {
+    margin-top: 0rem;
+  }
+
+  .connect-info {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 0rem;
+  }
+
+  .connect-form ul {
+    width: auto;
+  }
+  
+  .connect_ID-container {
+    height: auto;
+    overflow: visible;
+  }
+  .connect-ID {
+    width: 3.5rem;
+  }
+  .connect-image {
+    filter: contrast(0.1) blur(2px);
+    width: 315px;
+  }
+  .connect_ID-front .connect-text {
+    width: 80%;
+  }
+
+  .connect_ID-back {
+    display: none;
+  }
+  .connect_ID-back .connect-text {
+    width: 80%;
+  }
+
+  .connect-text {
+    align-items: center;
+  }
+  .connect_text-p {
+    font-size: .5rem;
+    width: 80%;
+  }
+  .connect_text-p span {
+  }
+
+  .connect-text .connect_text-p {
+    text-align: center;
+    font-size: .5rem;
+  }
+
+  .ID_columns {
+    gap: 0.25rem;
+  }
+  .ID_column-01 {
+    gap: 0rem;
+  }
+  .ID-info {
+    gap: 0.125rem;
+  }
+  .ID_info-row {
+    gap: .25rem;
+  }
+
+  .ID-info .ID-textbox {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .ID-label {
+    font-size: .3rem;
+  }
+  .ID-text {
+    font-size: .3rem;
+    line-height: 1.25;
+  }
+  .ID-textbox h6 {
+    font-size: .35rem !important;
+  }
+
+}
