@@ -227,17 +227,29 @@ const Connect = () => {
                                 <img src={IDback} className='connect-image' alt="ID back" />
                                 <div className='connect-text'>
                                     <p className='connect_text-p'>
-                                        My name is Samuel Noel (he/him), and this website is meant as both portfolio and playground for my creative and development work. I specialize in creating for the digital space, whether in the form of frontend development or visual identities and branding. My practice revolves around a full-scope approach, making design kits and website manuals along with the executed projects, to ensure the clients' understanding and ease of use.
+                                        My name is Samuel Noel (he/him), and this website is both portfolio and playground for creative and development work. I specialize in frontend development and visual identities. My practice revolves around a full-scope approach, making design kits and website manuals along with the executed projects, to ensure the clients' understanding and ease of application.
                                     
-                                        I took my college years in the De La Salle College of Saint Benilde, under their Information Systems program. From 2022 to 2024, I worked as a Senior Graphic Designer for the Benildean Press Corps. With PINO Studios, I have been their Web Developer and Multimedia Specialist since 2024, working on website projects for e-commerce and professional clients. As of 2025, I am also serving as a Frontend Engineer for Developh, a research & arts institution for critical & creative technologies in the Philippines.
+                                        I took my college in the De La Salle College of Saint Benilde, under the Information Systems program. From 2022 to 2024, I worked as a Senior Graphic Designer for the Benildean Press Corps. With PINO Studios, I have been both Web Developer and Multimedia Specialist since 2024, working on websites for e-commerce and professional clients. As of 2025, I am also serving as a Frontend Engineer for Developh, a research & arts institution for critical & creative technologies in the Philippines.
                                         
-                                        I believe that in an era of overconsumption and doomscrolling, when everything looks the same, the internet can become authentic again—or at the very least, fun.
+                                        I believe that in an era of overconsumption and doomscrolling, when everything looks the same, the internet should become authentic again—or at the very least, fun. And I'll contribute to that.
                                     </p>
                                     <fieldset>
                                         <button id="split" className='none'>SPLIT UP</button>
                                         <button id="reorder">REORGANIZE</button>
                                         <button id="debug">DEBUG MODE</button>
                                     </fieldset>
+                                </div>
+                            </div>
+                            <div className='connect_ID-mobile'>
+                                <img src={IDback} className='connect-image' alt="ID back" />
+                                <div className='connect_text-mobile'>
+                                    <p className='text-mobile'>
+                                        My name is Samuel Noel (he/him), and this website is both portfolio and playground for creative and development work. I specialize in frontend development and visual identities. My practice revolves around a full-scope approach, making design kits and website manuals along with the executed projects, to ensure the clients' understanding and ease of application.
+                                    
+                                        I took my college in the De La Salle College of Saint Benilde, under the Information Systems program. From 2022 to 2024, I worked as a Senior Graphic Designer for the Benildean Press Corps. With PINO Studios, I have been both Web Developer and Multimedia Specialist since 2024, working on websites for e-commerce and professional clients. As of 2025, I am also serving as a Frontend Engineer for Developh, a research & arts institution for critical & creative technologies in the Philippines.
+                                        
+                                        I believe that in an era of overconsumption and doomscrolling, when everything looks the same, the internet should become authentic again—or at the very least, fun. And I'll contribute to that.
+                                    </p>
                                 </div>
                             </div>
                         </div>

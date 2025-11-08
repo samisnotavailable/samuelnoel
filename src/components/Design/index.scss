@@ -330,3 +330,136 @@
 .description-paragraph {
     font-size: 1.25rem;
 }
+
+// Mobile Styles //
+
+@media (max-width: 768px) {
+ 
+    .preloader {
+        width: 100vw;
+        min-width: 0px !important;
+        height: 100vh;
+        min-height: 0px !important;
+    }
+
+    .design_page-container {
+        padding: 0 1rem;
+    }
+
+    .design-hero {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 3rem;
+        margin-top: 0rem;
+    }
+
+    .design_hero-text {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+        margin-top: 3rem;
+
+    }
+    .design_hero-text h6 {
+        width: auto;
+    }
+
+    .design_hero-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 35vh;
+        position: static;
+    }
+
+    .design_hero-thumbnail {
+        height: 30vh;
+    }
+
+    .design_hero-overflow {
+        overflow: visible;
+    }
+
+    .hero_text-left {
+        text-transform: uppercase;
+        font-size: 12vw;
+        text-align: center;
+        width: auto;
+    }
+    .hero_text-right {
+        font-size: 5vw;
+        width: auto;
+        text-align: center !important;
+    }
+
+    
+
+    .design-gallery {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0rem;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: scroll;
+    }
+    .gallery-image {
+        width: 33vw;
+        height: auto;
+    }
+    .gallery_outer-image {
+        width: 70vw;
+    }
+    .gallery-title {
+        font-size: 1rem;
+    }
+
+    .design-description {
+        flex-direction: column-reverse;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        min-height: 0vh;
+    }
+
+    .design_description-tags {
+        display: none;
+        flex-direction: row;
+        flex-wrap: wrap !important;
+
+    }
+    #tag-01, #tag-02, #tag-03, #tag-04, #tag-05, #tag-06, #tag-07, #tag-08, #tag-09, #tag-10 {
+        position: static !important;
+    }
+    .description-tag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto !important;
+        min-width: 60px !important;
+        height: auto !important;
+        min-height: 0px !important;
+        padding: 0.5rem;
+    }
+    .description-tag h3 {
+        font-size: .75rem;
+    }
+
+    .design_description-text {
+        position: static;
+        padding: 1.5rem;
+        box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.25), 0px 0px 40px 10px black;
+        //background: linear-gradient(180deg, #000000 60%, #00a1ff 90%, #ffffff 100%);
+        //background-color: black;
+        //border: 2px solid black;
+        //border-radius: 50px;
+        //box-shadow: inset 0px -2px 1px rgba(0, 0, 0, 0.8), inset 0 2px 1px rgb(255, 255, 255), 0px 0px 60px 0px black;
+        //color: white;
+    }
+    .description-title {
+        font-size: 1.5rem;
+    }
+    .description-paragraph {
+        font-size: .65rem !important;
+    }
+}
