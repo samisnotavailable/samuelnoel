@@ -29,6 +29,11 @@ import Item19 from '../../assets/images/swan/swan-19.png'
 const galleryImages = [Item00, Item01, Item02, Item03, Item04, Item05, Item06, Item07, Item08, Item09, Item10, Item18, Item11, Item12, Item13, Item14, Item15, Item16, Item17]
 
 const SWAN = () => {
+
+    useEffect(() => {
+        document.title = "SWAN | Samuel Noel"
+    }, []);
+
     const [loading, setLoading] = useState(true)
     const [fadeOut, setFadeOut] = useState(false)
     const heroContainerRef = useRef(null)

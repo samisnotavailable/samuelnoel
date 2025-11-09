@@ -14,6 +14,11 @@ import Item09 from '../../assets/images/natu/natu-09.jpg'
 
 
 const Natu = () => {
+
+    useEffect(() => {
+        document.title = "Natu Explorations | Samuel Noel"
+    }, []);
+
     const [loading, setLoading] = useState(true)
     const [fadeOut, setFadeOut] = useState(false)
 

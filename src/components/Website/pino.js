@@ -13,6 +13,11 @@ import Item08 from '../../assets/images/pino/pino-08.jpg'
 import Item09 from '../../assets/images/pino/pino-09.gif'
 
 const Pino = () => {
+
+    useEffect(() => {
+        document.title = "PINO Studios | Samuel Noel"
+    }, []);
+
     const [loading, setLoading] = useState(true)
     const [fadeOut, setFadeOut] = useState(false)
 
@@ -90,7 +95,7 @@ const Pino = () => {
         <div className='web-page'>
             {loading && (
                 <div className={`preloader${fadeOut ? ' fade-out' : ''}`}>
-                    <h1 className='preloader-text'>PINO STUDIO</h1>
+                    <h1 className='preloader-text'>PINO STUDIOS</h1>
                     <h6 className='preloader-text'>—through the looking glass—</h6>
                 </div>
             )}

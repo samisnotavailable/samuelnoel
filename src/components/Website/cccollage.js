@@ -14,6 +14,11 @@ import Item09 from '../../assets/images/cccollage/cccollage-09.png'
 
 
 const CCCollage = () => {
+
+    useEffect(() => {
+        document.title = "CCCOLLAGE | Samuel Noel"
+    }, []);
+
     const [loading, setLoading] = useState(true)
     const [fadeOut, setFadeOut] = useState(false)
 

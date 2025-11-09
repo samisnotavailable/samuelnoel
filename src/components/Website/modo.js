@@ -14,6 +14,11 @@ import Item09 from '../../assets/images/modo/modo-09.jpg'
 
 
 const Modo = () => {
+
+    useEffect(() => {
+        document.title = "MODO | Samuel Noel"
+    }, []);
+
     const [loading, setLoading] = useState(true)
     const [fadeOut, setFadeOut] = useState(false)
 

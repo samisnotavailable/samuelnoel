@@ -22,6 +22,11 @@ import Item12 from '../../assets/images/tb25/tb25b-04.webp'
 const galleryImages = [Item01, Item02, Item03, Item04, Item05, Item06, Item07, Item08, Item09, Item10, Item11, Item12]
 
 const TB25 = () => {
+
+    useEffect(() => {
+        document.title = "The Benildean Issue 25 | Samuel Noel"
+    }, []);
+
     const [loading, setLoading] = useState(true)
     const [fadeOut, setFadeOut] = useState(false)
     const heroContainerRef = useRef(null)

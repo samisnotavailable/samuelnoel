@@ -18,6 +18,11 @@ import Item08 from '../../assets/images/wclwhtr/wclwhtr-08.png'
 const galleryImages = [Item00, Item01, Item02, Item03, Item04, Item05, Item06, Item07, Item08]
 
 const WCLWHTR = () => {
+
+    useEffect(() => {
+        document.title = "We Cannot Leave Without Hoping to Return | Samuel Noel"
+    }, []);
+
     const [loading, setLoading] = useState(true)
     const [fadeOut, setFadeOut] = useState(false)
     const heroContainerRef = useRef(null)

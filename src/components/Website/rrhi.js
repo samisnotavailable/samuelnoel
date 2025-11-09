@@ -14,6 +14,11 @@ import Item09 from '../../assets/images/rrhi/rrhi-09.jpg'
 
 
 const RRHI = () => {
+
+    useEffect(() => {
+        document.title = "Robinsons Retail Holdings Inc. | Samuel Noel"
+    }, []);
+
     const [loading, setLoading] = useState(true)
     const [fadeOut, setFadeOut] = useState(false)
 

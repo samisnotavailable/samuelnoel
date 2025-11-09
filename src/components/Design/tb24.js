@@ -21,6 +21,11 @@ import Item11 from '../../assets/images/tb24/tb24-11.jpg'
 const galleryImages = [Item02, Item03, Item04, Item05, Item06, Item07, Item08, Item09, Item10, Item11, TB24TB, Item01, ]
 
 const TB24 = () => {
+
+    useEffect(() => {
+        document.title = "The Benildean 24 | Samuel Noel"
+    }, []);
+
     const [loading, setLoading] = useState(true)
     const [fadeOut, setFadeOut] = useState(false)
     const heroContainerRef = useRef(null)

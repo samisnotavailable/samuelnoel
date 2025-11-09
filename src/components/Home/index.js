@@ -1,4 +1,5 @@
 import './index.scss'
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Novice from '../../assets/images/novice/novice.png'
 import Pino from '../../assets/images/pino/pino.jpg'
@@ -20,6 +21,11 @@ import Madman from '../../assets/images/madman/madman.png'
 import AURO from '../../assets/images/auro/auro.jpg'
 
 const Home = () => {
+
+    useEffect(() => {
+        document.title = "Samuel Noel | Developer & Designer"
+    }, []);
+
     return (
         <div className='home-page'>
             <div className='padding-global'>

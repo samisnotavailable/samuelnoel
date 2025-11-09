@@ -14,6 +14,11 @@ import Item09 from '../../assets/images/madman/madman-09.jpg'
 
 
 const Madman = () => {
+
+    useEffect(() => {
+        document.title = "Madman | Samuel Noel"
+    }, []);
+
     const [loading, setLoading] = useState(true)
     const [fadeOut, setFadeOut] = useState(false)
 

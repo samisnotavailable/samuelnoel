@@ -14,6 +14,11 @@ import Item09 from '../../assets/images/diende/diende-09.gif'
 
 
 const Diende = () => {
+
+    useEffect(() => {
+        document.title = "Diende | Samuel Noel"
+    }, []);
+
     const [loading, setLoading] = useState(true)
     const [fadeOut, setFadeOut] = useState(false)
 

@@ -30,6 +30,8 @@ const Connect = () => {
 
     // ID section animation logic
     useEffect(() => {
+        document.title = "Let's Connect | Samuel Noel"
+
         const coords = [];
         const [ $split ] = utils.$('#split');
         const [ $reorder ] = utils.$('#reorder');

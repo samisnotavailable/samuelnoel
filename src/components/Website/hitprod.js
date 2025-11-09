@@ -14,6 +14,11 @@ import Item09 from '../../assets/images/hit/hit-09.jpg'
 
 
 const HitProd = () => {
+
+    useEffect(() => {
+        document.title = "Hit Productions | Samuel Noel"
+    }, []);
+
     const [loading, setLoading] = useState(true)
     const [fadeOut, setFadeOut] = useState(false)
 

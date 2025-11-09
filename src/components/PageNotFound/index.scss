@@ -6,13 +6,46 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    position: relative;
 }
 
 .error-globe {
-    height: 80%;
-    width: 50%;
+    height: 45rem;
+    width: 45rem;
     border-radius: 50%;
     background-color: red;
     filter: blur(200px);
+}
+
+.error-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+}
+
+// Mobile Styles //
+
+@media (max-width: 768px) {
+
+    .error-hero {
+    }
+
+    .error-globe {
+        height: 20rem;
+        width: 20rem;
+        filter: blur(50px);
+    }
+
+    .error-text {
+        width: 90%;
+    }
+
 }

@@ -31,6 +31,11 @@ import Item22 from '../../assets/images/agos/agos-22.jpg'
 const galleryImages = [Item03, Item04, Item05, Item06, Item07, Item08, Item09, Item10, Item16, Item01, Item02, Item11, Item12, Item13, Item14, Item15, Item17, Item19, Item20, Item21, Item22, Item18]
 
 const Agos = () => {
+
+    useEffect(() => {
+        document.title = "Agos | Samuel Noel"
+    }, []);
+
     const [loading, setLoading] = useState(true)
     const [fadeOut, setFadeOut] = useState(false)
     const heroContainerRef = useRef(null)
@@ -153,7 +158,6 @@ const Agos = () => {
             container.removeEventListener('wheel', handleWheel)
         }
     }, [zoom])
-
 
     return (
         <div className='design-page'>

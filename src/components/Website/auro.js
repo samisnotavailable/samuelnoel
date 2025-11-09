@@ -9,6 +9,11 @@ import Item04 from '../../assets/images/auro/auro-04.jpg'
 
 
 const Auro = () => {
+
+    useEffect(() => {
+        document.title = "Auro Chocolate | Samuel Noel"
+    }, []);
+
     const [loading, setLoading] = useState(true)
     const [fadeOut, setFadeOut] = useState(false)
 

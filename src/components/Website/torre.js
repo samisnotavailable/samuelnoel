@@ -14,6 +14,11 @@ import Item09 from '../../assets/images/torre/torre-09.jpg'
 
 
 const TorreLorenzo = () => {
+
+    useEffect(() => {
+        document.title = "Torre Lorenzo | Samuel Noel"
+    }, []);
+
     const [loading, setLoading] = useState(true)
     const [fadeOut, setFadeOut] = useState(false)
 

@@ -27,6 +27,11 @@ import Item17 from '../../assets/images/pmv/pmv-17.png'
 const galleryImages = [Item01, Item02, Item03, Item04, Item05, Item06, Item07, Item08, Item09, Item10, Item11, Item12, Item13, Item14, Item15, Item16, Item17]
 
 const PMV = () => {
+
+    useEffect(() => {
+        document.title = "People May Vary | Samuel Noel"
+    }, []);
+
     const [loading, setLoading] = useState(true)
     const [fadeOut, setFadeOut] = useState(false)
     const heroContainerRef = useRef(null)
