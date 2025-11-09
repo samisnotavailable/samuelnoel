@@ -16,7 +16,7 @@ import Item09 from '../../assets/images/madman/madman-09.jpg'
 const Madman = () => {
 
     useEffect(() => {
-        document.title = "Madman | Samuel Noel"
+        document.title = "Madman Creative Solutions | Samuel Noel"
     }, []);
 
     const [loading, setLoading] = useState(true)
