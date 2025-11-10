@@ -7,6 +7,7 @@ import IDback from '../../assets/images/ID-back.png'
 import IDempty from '../../assets/images/ID-front-empty.png'
 import IDpic from '../../assets/images/ID-pic.png'
 
+const EMAILJS_PUBLIC_KEY = 'wqRK1byDaDyM9UEQx'
 const SITE_KEY = '6Lf5_gcsAAAAANznVMLfVMQxjfU-HuVNc0h5WQJ5'
 
 const Connect = () => {
@@ -15,74 +16,80 @@ const Connect = () => {
     const widgetId = useRef(null)
 
     useEffect(() => {
-        emailjs.init('wqRK1byDaDyM9UEQx');
+        try {
+            emailjs.init(EMAILJS_PUBLIC_KEY)
+            console.log('EmailJS initialized with public key')
+        } catch (err) {
+            console.error('EmailJS init error', err)
+        }
+    }, [])
+
+    useEffect(() => {
         const container = document.getElementById('recaptcha-container');
         if (!container) return;
 
         const alreadyRendered = () => {
-        // if an iframe already exists we assume widget rendered
-        return container.querySelector('iframe') !== null || widgetId.current !== null;
+            return container.querySelector('iframe') !== null || widgetId.current !== null;
         };
 
         const renderWidget = () => {
-        if (!window.grecaptcha || alreadyRendered()) return;
-        try {
-            widgetId.current = window.grecaptcha.render(container, {
-            sitekey: SITE_KEY,
-            size: 'normal'
-            });
-        } catch (err) {
-            // ignore "already been rendered in this element" error
-            console.warn('reCAPTCHA render warning (ignored):', err && err.message ? err.message : err);
-        }
+            if (!window.grecaptcha || alreadyRendered()) return;
+            try {
+                widgetId.current = window.grecaptcha.render(container, {
+                    sitekey: SITE_KEY,
+                    size: 'normal'
+                });
+            } catch (err) {
+                console.warn('reCAPTCHA render warning (ignored):', err && err.message ? err.message : err);
+            }
         };
 
-        // try immediate render if grecaptcha already loaded
         renderWidget();
-
-        // retry until grecaptcha is available (then stop)
         const interval = setInterval(() => {
-        if (window.grecaptcha) {
-            renderWidget();
-            if (widgetId.current !== null || alreadyRendered()) clearInterval(interval);
-        }
+            if (window.grecaptcha) {
+                renderWidget();
+                if (widgetId.current !== null || alreadyRendered()) clearInterval(interval);
+            }
         }, 300);
 
         return () => {
-        clearInterval(interval);
-        // optional: reset widget on unmount if it was rendered
-        if (window.grecaptcha && widgetId.current !== null) {
-            try { window.grecaptcha.reset(widgetId.current); } catch (e) {}
-            widgetId.current = null;
-        }
+            clearInterval(interval);
+            if (window.grecaptcha && widgetId.current !== null) {
+                try { window.grecaptcha.reset(widgetId.current); } catch (e) {}
+                widgetId.current = null;
+            }
         };
     }, []);
 
     const sendEmail = async (e) => {
-        e.preventDefault()
-        // get token from widget
-        const token = window.grecaptcha ? window.grecaptcha.getResponse(widgetId.current) : '';
-        console.log('reCAPTCHA token:', token);
-        
-        if (!token) {
-        alert('Please complete the reCAPTCHA checkbox.')
-        return
+        e.preventDefault();
+        // debug checks
+        console.log('sendEmail called, refForm:', refForm.current);
+        if (!refForm.current) {
+            alert('Form not ready. Please try again.')
+            return
         }
 
-        // place token into hidden input so emailjs receives it
+        const token = window.grecaptcha ? window.grecaptcha.getResponse(widgetId.current) : '';
+        console.log('reCAPTCHA token:', token);
+
+        if (!token) {
+            alert('Please complete the reCAPTCHA checkbox.')
+            return
+        }
+
         const tokenInput = refForm.current.querySelector('input[name="g-recaptcha-response"]');
         if (tokenInput) tokenInput.value = token;
 
         try {
-            // now call sendForm without the 4th arg (we already init)
-            const res = await emailjs.sendForm('service_p3hbc8p', 'template_jnzbtsb', refForm.current);
+            // pass public key as 4th arg to guarantee the request carries it
+            const res = await emailjs.sendForm('service_p3hbc8p', 'template_jnzbtsb', refForm.current, EMAILJS_PUBLIC_KEY);
             console.log('EmailJS success response:', res);
             alert('Message successfully sent!');
             if (window.grecaptcha) window.grecaptcha.reset(widgetId.current);
             refForm.current.reset();
         } catch (err) {
             console.error('EmailJS error full:', err);
-            // EmailJS often returns err.text with details — show that
             const msg = err && (err.text || err.message) ? (err.text || err.message) : JSON.stringify(err);
             alert('Failed to send the message, please try again. Error: ' + msg);
             if (window.grecaptcha) window.grecaptcha.reset(widgetId.current);
