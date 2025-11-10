@@ -7,26 +7,81 @@ import IDback from '../../assets/images/ID-back.png'
 import IDempty from '../../assets/images/ID-front-empty.png'
 import IDpic from '../../assets/images/ID-pic.png'
 
+const SITE_KEY = '6Lf5_gcsAAAAANznVMLfVMQxjfU-HuVNc0h5WQJ5'
+
 const Connect = () => {
     // Contact form logic
-    const refForm = useRef()
+    const refForm = useRef(null)
+    const widgetId = useRef(null)
 
-    const sendEmail = (e) => {
-        e.preventDefault();
-        emailjs
-            .sendForm('service_p3hbc8p', 'template_jnzbtsb', refForm.current, {
-                publicKey: 'wqRK1byDaDyM9UEQx',
-            })
-            .then(
-                () => {
-                    alert('Message successfully sent. Please wait for a response within 7 working days.')
-                    window.location.reload(false)
-                },
-                (error) => {
-                    alert('Failed to send the message, please try again. Error: ' + error.text)
-                },
-            );
-    };
+    useEffect(() => {
+        const container = document.getElementById('recaptcha-container');
+        if (!container) return;
+
+        const alreadyRendered = () => {
+        // if an iframe already exists we assume widget rendered
+        return container.querySelector('iframe') !== null || widgetId.current !== null;
+        };
+
+        const renderWidget = () => {
+        if (!window.grecaptcha || alreadyRendered()) return;
+        try {
+            widgetId.current = window.grecaptcha.render(container, {
+            sitekey: SITE_KEY,
+            size: 'normal'
+            });
+        } catch (err) {
+            // ignore "already been rendered in this element" error
+            console.warn('reCAPTCHA render warning (ignored):', err && err.message ? err.message : err);
+        }
+        };
+
+        // try immediate render if grecaptcha already loaded
+        renderWidget();
+
+        // retry until grecaptcha is available (then stop)
+        const interval = setInterval(() => {
+        if (window.grecaptcha) {
+            renderWidget();
+            if (widgetId.current !== null || alreadyRendered()) clearInterval(interval);
+        }
+        }, 300);
+
+        return () => {
+        clearInterval(interval);
+        // optional: reset widget on unmount if it was rendered
+        if (window.grecaptcha && widgetId.current !== null) {
+            try { window.grecaptcha.reset(widgetId.current); } catch (e) {}
+            widgetId.current = null;
+        }
+        };
+    }, []);
+
+    const sendEmail = async (e) => {
+        e.preventDefault()
+        // get token from widget
+        const token = window.grecaptcha ? window.grecaptcha.getResponse(widgetId.current) : ''
+        if (!token) {
+        alert('Please complete the reCAPTCHA checkbox.')
+        return
+        }
+
+        // place token into hidden input so emailjs receives it
+        const tokenInput = refForm.current.querySelector('input[name="g-recaptcha-response"]')
+        if (tokenInput) tokenInput.value = token
+
+        try {
+        await emailjs.sendForm('service_p3hbc8p', 'template_jnzbtsb', refForm.current /*, 'YOUR_PUBLIC_KEY' if used */)
+        alert('Message successfully sent!')
+        // reset widget and form
+        if (window.grecaptcha) window.grecaptcha.reset(widgetId.current)
+        refForm.current.reset()
+        } catch (err) {
+        console.error(err)
+        alert('Failed to send the message, please try again. Error: ' + (err.text || err.message || err))
+        if (window.grecaptcha) window.grecaptcha.reset(widgetId.current)
+        }
+    }
 
     // ID section animation logic
     useEffect(() => {
@@ -157,6 +212,10 @@ const Connect = () => {
                                     </li>
                                     <li>
                                         <input className='form-input' type="text" name="findMe" placeholder='How did you find out about me? (e.g. social media, referral...)' required />
+                                    </li>
+                                    <li>
+                                        <input type="hidden" name="g-recaptcha-response" />
+                                        <div id="recaptcha-container" style={{ margin: '1rem 0' }}></div>
                                     </li>
                                     <li>
                                         <input type="submit" className='cta-btn' value="Send Inquiry" /> 
