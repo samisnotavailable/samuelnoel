@@ -6,9 +6,10 @@
       (function () {
         // preserve pathname, search and hash, then redirect to the SPA using a hash route
         var path = window.location.pathname + window.location.search + window.location.hash;
-        // %PUBLIC_URL% is replaced by CRA at build time
-        var base = "%PUBLIC_URL%";
-        var target = base + "/#"+ path;
+        // use runtime origin so the redirect doesn't rely on build-time replacement
+        var base = window.location.origin || (window.location.protocol + '//' + window.location.host);
+        // if your app is served from a subpath (rare for a custom domain), adjust base accordingly
+        var target = base + '/#' + path;
         window.location.replace(target);
       })();
     </script>
