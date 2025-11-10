@@ -26,5 +26,4 @@ yarn-error.log*
 node_modules/
 
 # Ignore package.json file
-package-lock.json
-package.json
+
