@@ -71,7 +71,7 @@ const Connect = () => {
         if (tokenInput) tokenInput.value = token
 
         try {
-        await emailjs.sendForm('service_p3hbc8p', 'template_jnzbtsb', refForm.current /*, 'YOUR_PUBLIC_KEY' if used */)
+        await emailjs.sendForm('service_p3hbc8p', 'template_jnzbtsb', refForm.current, 'wqRK1byDaDyM9UEQx')
         alert('Message successfully sent!')
         // reset widget and form
         if (window.grecaptcha) window.grecaptcha.reset(widgetId.current)
@@ -215,7 +215,7 @@ const Connect = () => {
                                     </li>
                                     <li>
                                         <input type="hidden" name="g-recaptcha-response" />
-                                        <div id="recaptcha-container" style={{ margin: '1rem 0' }}></div>
+                                        <div id="recaptcha-container" className='recaptcha'></div>
                                     </li>
                                     <li>
                                         <input type="submit" className='cta-btn' value="Send Inquiry" /> 

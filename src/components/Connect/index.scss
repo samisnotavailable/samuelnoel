@@ -258,6 +258,11 @@ a.ID-text {
     display: none;
 }
 
+.recaptcha {
+    filter: contrast(0.1);
+    margin: 1rem 0;
+}
+
 // Mobile styles 
 
 @media (max-width: 768px) {
