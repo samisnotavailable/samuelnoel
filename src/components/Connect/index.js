@@ -1,7 +1,7 @@
 import './index.scss'
 import { useRef, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
-import { animate, createTimeline, stagger, text, utils } from "https://esm.sh/animejs@4.1.1";
+import { animate, createTimeline, stagger, text, utils } from 'animejs'
 import { Link } from 'react-router-dom'
 import IDback from '../../assets/images/ID-back.png'
 import IDempty from '../../assets/images/ID-front-empty.png'
