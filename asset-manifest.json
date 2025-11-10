@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/samuelnoel/static/css/main.a175f0c1.css",
-    "main.js": "/samuelnoel/static/js/main.67e18fde.js",
+    "main.css": "/samuelnoel/static/css/main.779d61d1.css",
+    "main.js": "/samuelnoel/static/js/main.b6845f0a.js",
     "static/js/453.ac9b7e2a.chunk.js": "/samuelnoel/static/js/453.ac9b7e2a.chunk.js",
     "static/media/NIS-JTC-Win-M5.ttf": "/samuelnoel/static/media/NIS-JTC-Win-M5.f8e7c5b9cb6d9c358241.ttf",
     "static/media/NIS-JTC-Win-M5-Condensed.ttf": "/samuelnoel/static/media/NIS-JTC-Win-M5-Condensed.397049b4f528b4977bc7.ttf",
@@ -241,12 +241,12 @@
     "static/media/ID-pic.png": "/samuelnoel/static/media/ID-pic.11f9dd93993c2f15c6ec.png",
     "static/media/tb25b-00.png": "/samuelnoel/static/media/tb25b-00.e4eb4bc362b0f108adbe.png",
     "index.html": "/samuelnoel/index.html",
-    "main.a175f0c1.css.map": "/samuelnoel/static/css/main.a175f0c1.css.map",
-    "main.67e18fde.js.map": "/samuelnoel/static/js/main.67e18fde.js.map",
+    "main.779d61d1.css.map": "/samuelnoel/static/css/main.779d61d1.css.map",
+    "main.b6845f0a.js.map": "/samuelnoel/static/js/main.b6845f0a.js.map",
     "453.ac9b7e2a.chunk.js.map": "/samuelnoel/static/js/453.ac9b7e2a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a175f0c1.css",
-    "static/js/main.67e18fde.js"
+    "static/css/main.779d61d1.css",
+    "static/js/main.b6845f0a.js"
   ]
 }
