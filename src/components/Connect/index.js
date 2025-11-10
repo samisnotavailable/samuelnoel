@@ -15,6 +15,7 @@ const Connect = () => {
     const widgetId = useRef(null)
 
     useEffect(() => {
+        emailjs.init('wqRK1byDaDyM9UEQx');
         const container = document.getElementById('recaptcha-container');
         if (!container) return;
 
@@ -60,26 +61,31 @@ const Connect = () => {
     const sendEmail = async (e) => {
         e.preventDefault()
         // get token from widget
-        const token = window.grecaptcha ? window.grecaptcha.getResponse(widgetId.current) : ''
+        const token = window.grecaptcha ? window.grecaptcha.getResponse(widgetId.current) : '';
+        console.log('reCAPTCHA token:', token);
+        
         if (!token) {
         alert('Please complete the reCAPTCHA checkbox.')
         return
         }
 
         // place token into hidden input so emailjs receives it
-        const tokenInput = refForm.current.querySelector('input[name="g-recaptcha-response"]')
-        if (tokenInput) tokenInput.value = token
+        const tokenInput = refForm.current.querySelector('input[name="g-recaptcha-response"]');
+        if (tokenInput) tokenInput.value = token;
 
         try {
-        await emailjs.sendForm('service_p3hbc8p', 'template_jnzbtsb', refForm.current, 'wqRK1byDaDyM9UEQx')
-        alert('Message successfully sent!')
-        // reset widget and form
-        if (window.grecaptcha) window.grecaptcha.reset(widgetId.current)
-        refForm.current.reset()
+            // now call sendForm without the 4th arg (we already init)
+            const res = await emailjs.sendForm('service_p3hbc8p', 'template_jnzbtsb', refForm.current);
+            console.log('EmailJS success response:', res);
+            alert('Message successfully sent!');
+            if (window.grecaptcha) window.grecaptcha.reset(widgetId.current);
+            refForm.current.reset();
         } catch (err) {
-        console.error(err)
-        alert('Failed to send the message, please try again. Error: ' + (err.text || err.message || err))
-        if (window.grecaptcha) window.grecaptcha.reset(widgetId.current)
+            console.error('EmailJS error full:', err);
+            // EmailJS often returns err.text with details — show that
+            const msg = err && (err.text || err.message) ? (err.text || err.message) : JSON.stringify(err);
+            alert('Failed to send the message, please try again. Error: ' + msg);
+            if (window.grecaptcha) window.grecaptcha.reset(widgetId.current);
         }
     }
 
